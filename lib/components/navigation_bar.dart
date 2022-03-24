@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shift/components/Main.dart';
 import 'package:shift/components/events.dart';
 
 void main() => runApp(const NavBar());
@@ -29,11 +30,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    Main(),
     event(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
     Text(
       'Index 2: School',
       style: optionStyle,
