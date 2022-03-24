@@ -9,23 +9,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   shadowColor: Colors.transparent,
-      //   elevation: 0,
-      //   actions: [
-      //     IconButton(
-      //       iconSize: 35.0,
-      //       icon: Icon(
-      //         Icons.logout,
-      //         color: Color(0xFF2F3542),
-      //       ),
-      //       onPressed: () async {
-      //       }
-      //     ),
 
-      //   ],
-      // ),
       home: Scaffold(
 
           backgroundColor: Colors.white,
