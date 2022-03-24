@@ -129,8 +129,14 @@ class MyHomePage extends StatelessWidget {
                         
           body: 
           SingleChildScrollView(
-            child: Column(
+            //scrollDirection: Axis.horizontal,
+            child: 
+            Column(children: [ListView(
+              scrollDirection: Axis.horizontal,
+              children:[
+            Row(
               children: [
+                
                Padding(
                     padding: const EdgeInsets.all(8),
                     //  const EdgeInsets.only(right: 70),
@@ -225,10 +231,7 @@ class MyHomePage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                             
+                          
                               /*  if (theRatingNumber > 0)
                             InkWell(
                               child: Text(
@@ -237,9 +240,7 @@ class MyHomePage extends StatelessWidget {
                               ),
                             ) */
 
-                              SizedBox(
-                                height: 16.0,
-                              ),
+                            
                             ],
                           ),
                         ),
@@ -300,7 +301,7 @@ class MyHomePage extends StatelessWidget {
                     ))
               ],
             ),
-          )),
+             ] )]))),
     );
   }
 }
