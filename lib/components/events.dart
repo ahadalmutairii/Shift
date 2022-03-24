@@ -26,7 +26,7 @@ class event extends StatelessWidget {
                         'الفعاليات',
                         style: TextStyle(
                             fontStyle: FontStyle.normal,
-                            color: Colors.blue,
+                            color: Colors.black87,
                             fontWeight: FontWeight.bold,
                             fontSize: 40.0),
                       ),
@@ -39,7 +39,57 @@ class event extends StatelessWidget {
                     )
                   ],
                 ),
-        
+
+                Card(
+
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  elevation: 4.0,
+                  child: new InkWell(
+                    onTap: () {
+
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+                    },
+
+                    child: Container(
+                      decoration: new BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0.0, 0.0),
+                            color: Colors.grey.withOpacity(0),
+                            blurRadius: 0.0,
+                          ),
+                        ],
+                        border: Border.all(color: Colors.black87),
+                        borderRadius: new BorderRadius.circular(20.0),
+                        color: Colors.white,
+                      ),
+                      width:  MediaQuery.of(context).size.width * 0.90,
+                      height: 50,
+                      child:   Container(
+                        padding: EdgeInsets.only(top: 10,right: 30),
+                        child: Column(
+                          children: <Widget>[
+                            Align(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  'ابحث',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0),
+                                )),
+                          ],),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only( top: 10,),
+
+                ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -96,14 +146,14 @@ class event extends StatelessWidget {
                                                     fontSize: 20.0),
                                               )),
                                           Align(
-                                              alignment: Alignment.bottomLeft,
+                                              alignment: Alignment.bottomRight,
                                               child: Text(
-                                                '  12-1 PM                                اليوم',
+                                                '  12-1 PM  اليوم',
                                                 style: TextStyle(
                                                     fontStyle: FontStyle.italic,
                                                     color: Colors.grey,
                                                     fontWeight: FontWeight.normal,
-                                                    fontSize: 20.0),
+                                                    fontSize: 18.0),
                                               )),
                                     ],),
                                   ),
@@ -171,14 +221,14 @@ class event extends StatelessWidget {
                                                   fontSize: 20.0),
                                             )),
                                         Align(
-                                            alignment: Alignment.bottomLeft,
+                                            alignment: Alignment.bottomRight,
                                             child: Text(
-                                              '  9-2 PM                    اليوم - الخميس',
+                                              '  9-2 PM  اليوم - الخميس',
                                               style: TextStyle(
                                                   fontStyle: FontStyle.italic,
                                                   color: Colors.grey,
                                                   fontWeight: FontWeight.normal,
-                                                  fontSize: 20.0),
+                                                  fontSize: 18.0),
                                             )),
                                       ],),
                                 ),
@@ -244,14 +294,14 @@ class event extends StatelessWidget {
                                       fontSize: 20.0),
                                 )),
                             Align(
-                                alignment: Alignment.bottomLeft,
+                                alignment: Alignment.bottomRight,
                                 child: Text(
-                                  '  1-3 PM                               الثلاثاء',
+                                  '  1-3 PM الثلاثاء',
                                   style: TextStyle(
                                       fontStyle: FontStyle.italic,
                                       color: Colors.grey,
                                       fontWeight: FontWeight.normal,
-                                      fontSize: 20.0),
+                                      fontSize: 18.0),
                                 )),
                           ],),),
                     ),
@@ -317,14 +367,14 @@ class event extends StatelessWidget {
                                           fontSize: 20.0),
                                     )),
                                 Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.bottomRight,
                                     child: Text(
-                                      '  12-1 PM                                اليوم',
+                                      '  12-1 PM اليوم',
                                       style: TextStyle(
                                           fontStyle: FontStyle.italic,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.normal,
-                                          fontSize: 20.0),
+                                          fontSize: 18.0),
                                     )),
                               ],),),
                         ),
@@ -389,14 +439,14 @@ class event extends StatelessWidget {
                                           fontSize: 20.0),
                                     )),
                                 Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.bottomRight,
                                     child: Text(
-                                      '  1-3 PM                               الثلاثاء',
+                                      '  1-3 PM الثلاثاء',
                                       style: TextStyle(
                                           fontStyle: FontStyle.italic,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.normal,
-                                          fontSize: 20.0),
+                                          fontSize: 18.0),
                                     )),
                               ],),),
                         ),
