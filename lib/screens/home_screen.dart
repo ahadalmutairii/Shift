@@ -1,216 +1,306 @@
 import 'package:flutter/material.dart';
 import 'package:shift/components/navigation_bar.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  static const String _title = 'Flutter Code Sample';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      // appBar: AppBar(
-      //   // Here we take the value from the MyHomePage object that was created by
-      //   // the App.build method, and use it to set our appbar title.
-      //   title: Text(widget.title),
-      // ),
-      body:  SingleChildScrollView(
+      home: Scaffold(
+          backgroundColor: Colors.white,
+          
+           appBar: AppBar(
+                        backgroundColor: Colors.white,
+                        elevation: 0,
+                        //centerTitle: true,
+                      //  bottom: tabs,
+                        title:  Padding(
+                          padding: const EdgeInsets.only(top:100),
+                          child: TextField(
+                              onTap: () {
+                                // setState(() {
+                                //   isSearchByCategory = false;
+                                //   appBarColor = Colors.white;
+                                //   tabNum = 3;
+                                //   isNotSearching = false;
+                                //   this.tabs = new TabBar(
+                                //     indicatorColor: Colors.orange[300],
+                                //     labelColor: Colors.black,
+                                //     labelStyle: TextStyle(
+                                //       fontFamily: 'Comfortaa',
+                                //       fontSize: 12,
+                                //     ),
+                                //     tabs: [
+                                //       Tab(
+                                //         text: "Event Name",
+                                //       ),
+                                //       Tab(
+                                //         text: "Event Description",
+                                //       ),
+                                //       Tab(
+                                //         text: "User",
+                                //       ),
+                                //     ],
+                                //   );
+                                //   //this.actionIcon =
+                                // });
+                              },
+                              decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Colors.grey[200],
+                                  // contentPadding:
+                                  //     EdgeInsets.symmetric(vertical: 15),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[200]!, width: 2),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[200]!, width: 1),
+                                  ),
+                                  hintText: "Search",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey[800],
+                                    fontFamily: 'Comfortaa',
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.search,
+                                    color: Colors.grey[800],
+                                  )),
+                              onChanged: (val) {
+                                // setState(() {
+                                //   searchInput = val;
+                                // });
+                              },
+                            ),
+                        ),
+                        ),
+                        // actions: isSearchByCategory
+                        //     ? null
+                        //     : <Widget>[
+                        //         new IconButton(
+                        //           padding:
+                        //               const EdgeInsets.only(right: 10, top: 22),
+                        //           //iconSize: 40,
+                        //           icon: new Icon(Icons.cancel,
+                        //               color: Colors.black, size: 27),
+                        //           onPressed: () {
+                        //             setState(() {
+                        //               // if (this.actionIcon.icon == Icons.search) {
+                        //               //   //this.appBarTitle =
+                        //               // } else {
+                        //               FocusScope.of(context).unfocus();
+                        //               appBarColor = Colors.transparent;
+                        //               isSearchByCategory = true;
+                        //               searchInput = "";
+                        //               tabNum = 0;
+                        //               isNotSearching = true;
+                        //               this.tabs = new TabBar(
+                        //                 indicatorColor: Colors.purple[600],
+                        //                 labelColor: Colors.black,
+                        //                 labelStyle: TextStyle(
+                        //                   fontFamily: 'Comfortaa',
+                        //                   fontSize: 22,
+                        //                 ),
+                        //                 tabs: [],
+                        //               );
+                        //               // this.actionIcon = new Icon(Icons.search,
+                        //               //     color: Colors.black, size: 40);
+                        //               // this.appBarTitle = new Text('\nSearch ',
+                        //               //     style: TextStyle(
+                        //               //         color: Colors.black,
+                        //               //         fontFamily: 'Comfortaa',
+                        //               //         fontSize: 24,
+                        //               //         fontWeight: FontWeight.bold));
+                        //             }
+                        //                 //}
+                        //                 );
+                        //           },
+                        //         ),
+                        //       ]
+                        
+          body: 
+          SingleChildScrollView(
             child: Column(
               children: [
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top:30),
-                    )
-                  ],
-                ),
-        
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-
-                            Card(
-
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
+               Padding(
+                    padding: const EdgeInsets.all(8),
+                    //  const EdgeInsets.only(right: 70),
+                    child: GestureDetector(
+                      child: Card(
+                        semanticContainer: true,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        elevation: 3.0,
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          color: Colors.white,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              SizedBox(
+                                height: 0.0,
                               ),
-                              elevation: 4.0,
-                              child: new InkWell(
-                                 onTap: () {
-            
-//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
-                                },
-                                child: Container(
-                                  decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(16.0),
-                                    color: Color(0xFF2F3542),
+                              AspectRatio(
+                                  aspectRatio: 2.5,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: const Radius.circular(20),
+                                        topRight: const Radius.circular(20)),
+                                    child:Image.asset(
+                                            'images/carnival.jpg',
+                                            //   width: 200,
+                                            height: 200,
+                                            fit: BoxFit.cover,
+                                          ),
+                                  )),
+                              Row(
+                                children: <Widget>[
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.location_on_outlined,
+                                      textDirection: TextDirection.ltr,
+                                      color: Colors.orange[300],
+                                      size: 25,
+                                    ),
+                                    //Location()
+
+                                    onPressed: () {},
                                   ),
-                                  width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'فعاليات',
-                                        style: TextStyle(
-                                            fontStyle: FontStyle.normal,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
-                                      )),
-                                ),
+                                  Text("fd"),
+                                ],
                               ),
-                            ),],),
-                            
-                Container(
-                  padding: EdgeInsets.only( top: 20),
-
-                ),
-    Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
-                              ),
-                              elevation: 4.0,
-                              child: new InkWell(
-                                 onTap: () {
-                                  // BottomNavigationBar navigationBar =  _globalKey.currentWidget as BottomNavigationBar;
-                                  // navigationBar.onTap!(2);
-
-                              //nav
-                                            },
-                                child: Container(
-                                  decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(16.0),
-                                    color: Color(0xFFFF6B81),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 40.0,
+                                    height: 40,
                                   ),
-                                  width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'وظائف',
-                                        style: TextStyle(
-                                            fontStyle: FontStyle.normal,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
-                                      )),
-                                ),
+                                  Text(
+                                    "kc",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                  Text(
+                                     "..",
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 40.0,
+                                  ),
+                                  Text(
+                                    "vv",
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                  Text(
+                                  "..",
+                                        
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                             
+                              /*  if (theRatingNumber > 0)
+                            InkWell(
+                              child: Text(
+                                '($Count)',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ) */
+
+                              SizedBox(
+                                height: 16.0,
+                              ),
+                            ],
+                          ),
                         ),
-                Container(
-                  padding: EdgeInsets.only( top: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                      )
 
-                ),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  elevation: 4.0,
-                  child: new InkWell(
-                    onTap: () {
-                      
-                   
-                    },
-                    child: Container(
-                      decoration: new BoxDecoration(
-                        borderRadius: new BorderRadius.circular(16.0),
-                        color: Color(0xFF2F3542),
-                      ),
-                      width:  MediaQuery.of(context).size.width * 0.90,
-                      height: 110,
-                      child: Center(
-                          child: Text(
-                            'تدريب تعاوني',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
-                    ),
-                  ),
-                ),],),
-            
-
+                      // Card(
+                      //     elevation: 6,
+                      //     shape: RoundedRectangleBorder(
+                      //         borderRadius:
+                      //             BorderRadius.circular(10),
+                      //         side: BorderSide(
+                      //             width: 0.5,
+                      //             color: Colors.orange.shade400)),
+                      //     margin: const EdgeInsets.fromLTRB(
+                      //         10, 0, 10, 0),
+                      //     //color: Colors.orangeAccent,
+                      //     child: ListTile(
+                      //       title: Center(
+                      //           child: Text(
+                      //         document['name'],
+                      //         textAlign: TextAlign.center,
+                      //         style: TextStyle(
+                      //             color: Colors.black,
+                      //             fontFamily: 'Comfortaa',
+                      //             fontSize: 16,
+                      //             ),
+                      //       )),
+                      //       /*  subtitle: Text(
+                      //         document['date'].toString(),
+                      //         style: TextStyle(
+                      //             color: Colors.amber[600],
+                      //             fontFamily: 'Comfortaa',
+                      //             fontSize: 14),
+                      //       ), */
+                      //       // 00:000
+                      //       trailing: Icon(
+                      //         Icons.arrow_forward_ios_sharp,
+                      //         color: Colors.purple[300],
+                      //       ),
+                      // onTap: () {
+                      //   Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) =>
+                      //               eventDetailsForUesers(
+                      //                 event: uid,
+                      //                 // change to move to details and booked
+                      //               )));
+                      // },
+                      //     )));
+                      ,
+                      onTap: () {
+                     
+                      },
+                    ))
               ],
             ),
-          ),
-      bottomNavigationBar: NavBar(),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
+          )),
     );
   }
 }
