@@ -14,72 +14,74 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
+          
            appBar: AppBar(
                         backgroundColor: Colors.white,
                         elevation: 0,
                         //centerTitle: true,
                       //  bottom: tabs,
-                        title: Padding(
-                          padding: EdgeInsets.only(top: 16.0, bottom: 5.0),
+                        title:  Padding(
+                          padding: const EdgeInsets.only(top:100),
                           child: TextField(
-                            onTap: () {
-                              // setState(() {
-                              //   isSearchByCategory = false;
-                              //   appBarColor = Colors.white;
-                              //   tabNum = 3;
-                              //   isNotSearching = false;
-                              //   this.tabs = new TabBar(
-                              //     indicatorColor: Colors.orange[300],
-                              //     labelColor: Colors.black,
-                              //     labelStyle: TextStyle(
-                              //       fontFamily: 'Comfortaa',
-                              //       fontSize: 12,
-                              //     ),
-                              //     tabs: [
-                              //       Tab(
-                              //         text: "Event Name",
-                              //       ),
-                              //       Tab(
-                              //         text: "Event Description",
-                              //       ),
-                              //       Tab(
-                              //         text: "User",
-                              //       ),
-                              //     ],
-                              //   );
-                              //   //this.actionIcon =
-                              // });
-                            },
-                            decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.grey[200],
-                                contentPadding:
-                                    EdgeInsets.symmetric(vertical: 15),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                  borderSide: BorderSide(
-                                      color: Colors.grey[200]!, width: 2),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                  borderSide: BorderSide(
-                                      color: Colors.grey[200]!, width: 1),
-                                ),
-                                hintText: "Search",
-                                hintStyle: TextStyle(
-                                  color: Colors.grey[800],
-                                  fontFamily: 'Comfortaa',
-                                ),
-                                prefixIcon: Icon(
-                                  Icons.search,
-                                  color: Colors.grey[800],
-                                )),
-                            onChanged: (val) {
-                              // setState(() {
-                              //   searchInput = val;
-                              // });
-                            },
-                          ),
+                              onTap: () {
+                                // setState(() {
+                                //   isSearchByCategory = false;
+                                //   appBarColor = Colors.white;
+                                //   tabNum = 3;
+                                //   isNotSearching = false;
+                                //   this.tabs = new TabBar(
+                                //     indicatorColor: Colors.orange[300],
+                                //     labelColor: Colors.black,
+                                //     labelStyle: TextStyle(
+                                //       fontFamily: 'Comfortaa',
+                                //       fontSize: 12,
+                                //     ),
+                                //     tabs: [
+                                //       Tab(
+                                //         text: "Event Name",
+                                //       ),
+                                //       Tab(
+                                //         text: "Event Description",
+                                //       ),
+                                //       Tab(
+                                //         text: "User",
+                                //       ),
+                                //     ],
+                                //   );
+                                //   //this.actionIcon =
+                                // });
+                              },
+                              decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Colors.grey[200],
+                                  // contentPadding:
+                                  //     EdgeInsets.symmetric(vertical: 15),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[200]!, width: 2),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[200]!, width: 1),
+                                  ),
+                                  hintText: "Search",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey[800],
+                                    fontFamily: 'Comfortaa',
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.search,
+                                    color: Colors.grey[800],
+                                  )),
+                              onChanged: (val) {
+                                // setState(() {
+                                //   searchInput = val;
+                                // });
+                              },
+                            ),
+                        ),
                         ),
                         // actions: isSearchByCategory
                         //     ? null
@@ -124,246 +126,178 @@ class MyHomePage extends StatelessWidget {
                         //           },
                         //         ),
                         //       ]
-                        ),
-          body: SingleChildScrollView(
+                        
+          body: 
+          SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  padding: EdgeInsets.only(top: 75, right: 30),
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'الفعاليات',
-                      style: TextStyle(
-                          fontStyle: FontStyle.normal,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40.0),
-                    ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 10),
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      elevation: 4.0,
-                      child: new InkWell(
-                        onTap: () {
-//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
-                        },
+               Padding(
+                    padding: const EdgeInsets.all(8),
+                    //  const EdgeInsets.only(right: 70),
+                    child: GestureDetector(
+                      child: Card(
+                        semanticContainer: true,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        elevation: 3.0,
                         child: Container(
-                          decoration: new BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                          margin: EdgeInsets.all(10),
+                          color: Colors.white,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              SizedBox(
+                                height: 0.0,
                               ),
-                            ],
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: new BorderRadius.circular(16.0),
-                            color: Colors.white,
-                          ),
-                          width: MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                            'ورشة عمل إدارة المشاريع',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      elevation: 4.0,
-                      child: new InkWell(
-                        onTap: () {
-                          // BottomNavigationBar navigationBar =  _globalKey.currentWidget as BottomNavigationBar;
-                          // navigationBar.onTap!(2);
+                              AspectRatio(
+                                  aspectRatio: 2.5,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: const Radius.circular(20),
+                                        topRight: const Radius.circular(20)),
+                                    child:Image.asset(
+                                            'images/carnival.jpg',
+                                            //   width: 200,
+                                            height: 200,
+                                            fit: BoxFit.cover,
+                                          ),
+                                  )),
+                              Row(
+                                children: <Widget>[
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.location_on_outlined,
+                                      textDirection: TextDirection.ltr,
+                                      color: Colors.orange[300],
+                                      size: 25,
+                                    ),
+                                    //Location()
 
-                          //nav
-                        },
-                        child: Container(
-                          decoration: new BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                                    onPressed: () {},
+                                  ),
+                                  Text("fd"),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 40.0,
+                                    height: 40,
+                                  ),
+                                  Text(
+                                    "kc",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                  Text(
+                                     "..",
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 40.0,
+                                  ),
+                                  Text(
+                                    "vv",
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  ),
+                                  Text(
+                                  "..",
+                                        
+                                    style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Comfortaa"),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                             
+                              /*  if (theRatingNumber > 0)
+                            InkWell(
+                              child: Text(
+                                '($Count)',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ) */
+
+                              SizedBox(
+                                height: 16.0,
                               ),
                             ],
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: new BorderRadius.circular(16.0),
-                            color: Colors.white,
                           ),
-                          width: MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                            'Future you',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      elevation: 4.0,
-                      child: new InkWell(
-                        onTap: () {},
-                        child: Container(
-                          decoration: new BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
-                              ),
-                            ],
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: new BorderRadius.circular(16.0),
-                            color: Colors.white,
-                          ),
-                          width: MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                            'يوم الأرض',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      elevation: 4.0,
-                      child: new InkWell(
-                        onTap: () {},
-                        child: Container(
-                          decoration: new BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
-                              ),
-                            ],
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: new BorderRadius.circular(16.0),
-                            color: Colors.white,
-                          ),
-                          width: MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                            'المعرض الفني',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      elevation: 4.0,
-                      child: new InkWell(
-                        onTap: () {},
-                        child: Container(
-                          decoration: new BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
-                              ),
-                            ],
-                            border: Border.all(color: Colors.blue),
-                            borderRadius: new BorderRadius.circular(16.0),
-                            color: Colors.white,
-                          ),
-                          width: MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                            'المعرض الفني',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                      )
+
+                      // Card(
+                      //     elevation: 6,
+                      //     shape: RoundedRectangleBorder(
+                      //         borderRadius:
+                      //             BorderRadius.circular(10),
+                      //         side: BorderSide(
+                      //             width: 0.5,
+                      //             color: Colors.orange.shade400)),
+                      //     margin: const EdgeInsets.fromLTRB(
+                      //         10, 0, 10, 0),
+                      //     //color: Colors.orangeAccent,
+                      //     child: ListTile(
+                      //       title: Center(
+                      //           child: Text(
+                      //         document['name'],
+                      //         textAlign: TextAlign.center,
+                      //         style: TextStyle(
+                      //             color: Colors.black,
+                      //             fontFamily: 'Comfortaa',
+                      //             fontSize: 16,
+                      //             ),
+                      //       )),
+                      //       /*  subtitle: Text(
+                      //         document['date'].toString(),
+                      //         style: TextStyle(
+                      //             color: Colors.amber[600],
+                      //             fontFamily: 'Comfortaa',
+                      //             fontSize: 14),
+                      //       ), */
+                      //       // 00:000
+                      //       trailing: Icon(
+                      //         Icons.arrow_forward_ios_sharp,
+                      //         color: Colors.purple[300],
+                      //       ),
+                      // onTap: () {
+                      //   Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) =>
+                      //               eventDetailsForUesers(
+                      //                 event: uid,
+                      //                 // change to move to details and booked
+                      //               )));
+                      // },
+                      //     )));
+                      ,
+                      onTap: () {
+                     
+                      },
+                    ))
               ],
             ),
           )),
