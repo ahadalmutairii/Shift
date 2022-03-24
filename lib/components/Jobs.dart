@@ -69,15 +69,19 @@ class jobs extends StatelessWidget {
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
                                   height: 110,
-                                  child: Center(
-                                      child: Text(
+                                  child:   Container(
+                                    padding: EdgeInsets.only(top: 10,right: 30),
+                                    child:  Align(
+                                        alignment: Alignment.topRight,
+                                        child: Text(
                                         'مدخل بيانات',
                                         style: TextStyle(
+
                                             fontStyle: FontStyle.normal,
                                             color: Colors.blue,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20.0),
-                                      )),
+                                      )),),
                                 ),
                               ),
                             ),],),
@@ -117,8 +121,11 @@ class jobs extends StatelessWidget {
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
                                   height: 110,
-                                  child: Center(
-                                      child: Text(
+                                  child:   Container(
+                                    padding: EdgeInsets.only(top: 10,right: 30),
+                                    child:  Align(
+                                        alignment: Alignment.topRight,
+                                        child: Text(
                                         'محاسب',
                                         style: TextStyle(
                                             fontStyle: FontStyle.normal,
@@ -126,7 +133,7 @@ class jobs extends StatelessWidget {
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20.0),
                                       )),
-                                ),
+                                ),),
                               ),
                             ),
                           ],
@@ -164,15 +171,18 @@ class jobs extends StatelessWidget {
                       ),
                       width:  MediaQuery.of(context).size.width * 0.90,
                       height: 110,
-                      child: Center(
-                          child: Text(
+    child:   Container(
+    padding: EdgeInsets.only(top: 10,right: 30),
+    child:  Align(
+    alignment: Alignment.topRight,
+    child: Text(
                             'مساعد إداري',
                             style: TextStyle(
                                 fontStyle: FontStyle.normal,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20.0),
-                          )),
+                          )),),
                     ),
                   ),
                 ),],),
@@ -210,15 +220,18 @@ class jobs extends StatelessWidget {
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
                           height: 110,
-                          child: Center(
-                              child: Text(
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 30),
+                            child:  Align(
+                                alignment: Alignment.topRight,
+                                child: Text(
                                 'منظم',
                                 style: TextStyle(
                                     fontStyle: FontStyle.normal,
                                     color: Colors.blue,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0),
-                              )),
+                              )),),
                         ),
                       ),
                     ),],),
@@ -255,15 +268,18 @@ class jobs extends StatelessWidget {
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
                           height: 110,
-                          child: Center(
-                              child: Text(
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 30),
+                            child:  Align(
+                                alignment: Alignment.topRight,
+                                child: Text(
                                 'منظم معرض',
                                 style: TextStyle(
                                     fontStyle: FontStyle.normal,
                                     color: Colors.blue,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0),
-                              )),
+                              )),),
                         ),
                       ),
                     ),],),

@@ -17,8 +17,10 @@ class event extends StatelessWidget {
               children: [
 
                 Container(
+
                   padding: EdgeInsets.only(top: 75,right: 30),
-                      child:  Align(
+                      child:
+                      Align(
                         alignment: Alignment.centerRight,
                         child: Text(
                         'الفعاليات',
@@ -69,15 +71,42 @@ class event extends StatelessWidget {
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
                                   height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'ورشة عمل إدارة المشاريع',
+                                  child:   Container(
+                                    padding: EdgeInsets.only(top: 10,right: 30),
+                                    child: Column(
+                                        children: <Widget>[
+                                          Align(
+                                        alignment: Alignment.topRight,
+                                        child: Text(
+                                        'ورشة عمل إدارة المشاريع ',
                                         style: TextStyle(
                                             fontStyle: FontStyle.normal,
                                             color: Colors.blue,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20.0),
                                       )),
+                                          Align(
+                                              alignment: Alignment.bottomRight,
+                                              child: Text(
+                                                'كلية إدارة الأعمال',
+                                                style: TextStyle(
+                                                    fontStyle: FontStyle.normal,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 20.0),
+                                              )),
+                                          Align(
+                                              alignment: Alignment.bottomLeft,
+                                              child: Text(
+                                                '  12-1 PM                                اليوم',
+                                                style: TextStyle(
+                                                    fontStyle: FontStyle.italic,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.normal,
+                                                    fontSize: 20.0),
+                                              )),
+                                    ],),
+                                  ),
                                 ),
                               ),
                             ),],),
@@ -117,19 +146,45 @@ class event extends StatelessWidget {
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
                                   height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'Future you',
-                                        style: TextStyle(
-                                            fontStyle: FontStyle.normal,
-                                            color: Colors.blue,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
-                                      )),
+                                  child:   Container(
+                                    padding: EdgeInsets.only(top: 10,right: 30),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Align(
+                                            alignment: Alignment.topRight,
+                                            child: Text(
+                                              'Future You ',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.normal,
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20.0),
+                                            )),
+                                        Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              'كلية الحاسب والمعلومات',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.normal,
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20.0),
+                                            )),
+                                        Align(
+                                            alignment: Alignment.bottomLeft,
+                                            child: Text(
+                                              '  9-2 PM                    اليوم - الخميس',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.italic,
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.normal,
+                                                  fontSize: 20.0),
+                                            )),
+                                      ],),
                                 ),
                               ),
                             ),
-                          ],
+                            ),  ],
                         ),
                 Container(
                   padding: EdgeInsets.only( top: 10),
@@ -164,15 +219,41 @@ class event extends StatelessWidget {
                       ),
                       width:  MediaQuery.of(context).size.width * 0.90,
                       height: 110,
-                      child: Center(
-                          child: Text(
-                            'يوم الأرض',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
+                      child:   Container(
+                          padding: EdgeInsets.only(top: 10,right: 30),
+                        child: Column(
+                          children: <Widget>[
+                            Align(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  'أساسيات الإسعافات الأولية',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0),
+                                )),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Text(
+                                  'كلية الطب',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0),
+                                )),
+                            Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  '  1-3 PM                               الثلاثاء',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 20.0),
+                                )),
+                          ],),),
                     ),
                   ),
                 ),],),
@@ -181,6 +262,7 @@ class event extends StatelessWidget {
                   padding: EdgeInsets.only( top: 10),
 
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -210,18 +292,45 @@ class event extends StatelessWidget {
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
                           height: 110,
-                          child: Center(
-                              child: Text(
-                                'المعرض الفني',
-                                style: TextStyle(
-                                    fontStyle: FontStyle.normal,
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0),
-                              )),
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 30),
+                            child: Column(
+                              children: <Widget>[
+                                Align(
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      'كرنفال السعادة',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      'كلية الآداب',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Text(
+                                      '  12-1 PM                                اليوم',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.italic,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 20.0),
+                                    )),
+                              ],),),
                         ),
                       ),
                     ),],),
+
                 Container(
                   padding: EdgeInsets.only( top: 10),
 
@@ -255,18 +364,50 @@ class event extends StatelessWidget {
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
                           height: 110,
-                          child: Center(
-                              child: Text(
-                                'المعرض الفني',
-                                style: TextStyle(
-                                    fontStyle: FontStyle.normal,
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0),
-                              )),
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 30),
+                            child: Column(
+                              children: <Widget>[
+                                Align(
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      'يوم الأرض',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      'البهو الرئيسي',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Text(
+                                      '  1-3 PM                               الثلاثاء',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.italic,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 20.0),
+                                    )),
+                              ],),),
                         ),
                       ),
                     ),],),
+
+                Container(
+                  padding: EdgeInsets.only( top: 10),
+
+                ),
+
 
 
               ],
