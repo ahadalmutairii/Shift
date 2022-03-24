@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 //import 'package:shift/components/Main.dart';
 import 'package:shift/components/events.dart';
+import 'package:shift/components/Jobs.dart';
+
 
 void main() => runApp(const NavBar());
 
@@ -32,6 +34,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
    // Main(),
     event(),
+    jobs(),
     Text(
       'Index 2: School',
       style: optionStyle,
