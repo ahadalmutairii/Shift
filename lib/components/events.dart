@@ -49,7 +49,7 @@ class event extends StatelessWidget {
                   child: new InkWell(
                     onTap: () {
 
-//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+//                              طNavigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
                     },
 
                     child: Container(
