@@ -8,7 +8,8 @@ class jobs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return MaterialApp(
+      home: Scaffold(
 
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
@@ -271,7 +272,7 @@ class jobs extends StatelessWidget {
               ],
             ),
           )
-      
+      ),
     );
   }
 
