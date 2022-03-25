@@ -95,7 +95,7 @@ class jobs extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/tahakom.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -175,7 +175,7 @@ class jobs extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/sdaia.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -255,7 +255,7 @@ class jobs extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/starbucks.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -335,7 +335,7 @@ class jobs extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/tahakom.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -414,7 +414,7 @@ class jobs extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/starbucks.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,

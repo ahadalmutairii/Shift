@@ -11,7 +11,9 @@ class start extends StatelessWidget {
 
   return MaterialApp(
   home: Scaffold(
+    extendBodyBehindAppBar: true,
   backgroundColor: Colors.white,
+
   body: const MyStatefulWidget(),
 
   ),
@@ -34,8 +36,10 @@ class start extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       SingleChildScrollView(
+
         child: Column(
           children: [
+
             SizedBox(height:250),
 
             Align(

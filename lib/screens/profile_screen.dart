@@ -120,7 +120,7 @@ class Profile extends StatelessWidget {
                     bottomRight: const Radius.circular(20),
                     bottomLeft: const Radius.circular(20)),
                 child: Container(
-                    width: 200,
+                    width: 180,
                     height: 120,
                     color: Colors.lightBlueAccent[100],
                     child: Column(
@@ -157,7 +157,7 @@ class Profile extends StatelessWidget {
                     bottomRight: const Radius.circular(20),
                     bottomLeft: const Radius.circular(20)),
                 child: Container(
-                    width: 200,
+                    width: 180,
                      height: 120,
                     color: Colors.lightBlueAccent[100],
                     child: Column(
@@ -196,6 +196,8 @@ class Profile extends StatelessWidget {
           ),
                      SingleChildScrollView(
                        scrollDirection: Axis.horizontal,
+                       reverse:true,
+
                        child: Row(
                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                  children: [
