@@ -7,6 +7,7 @@ import 'package:shift/screens/home_screen.dart';
 import 'package:shift/components/volunteering.dart';
 import 'package:shift/components/COOP.dart';
 import 'package:shift/components/login.dart';
+import 'package:shift/screens/profile_screen.dart';
 
 
 
@@ -26,10 +27,11 @@ class _NavBarState extends State<NavBar> {
    MyHomePage(),
     jobs(),
     job(),
-    login(),
-    COOP(),
-    event(),
-    volunteering(),
+    Profile(),
+    // login(),
+    // COOP(),
+    // event(),
+    // volunteering(),
 
   
   
