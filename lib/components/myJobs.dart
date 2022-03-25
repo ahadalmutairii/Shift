@@ -179,7 +179,7 @@ class myJobs extends StatelessWidget {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 90,
+                                      width: 70,
                                     ),
                                     Align(
                                         alignment: Alignment.bottomRight,
@@ -288,7 +288,7 @@ class myJobs extends StatelessWidget {
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 120,
+                                      width: 90,
                                     ),
                                     Align(
                                         alignment: Alignment.bottomRight,
