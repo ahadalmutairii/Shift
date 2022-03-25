@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:shift/components/navigation_bar.dart';
+import 'package:shift/components/signup.dart';
 
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
@@ -117,7 +118,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 15),
                   ),
                   onPressed: () {
-                    //signup screen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const signup()),
+                    );
                   },
                 )
               ],
