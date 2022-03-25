@@ -21,10 +21,12 @@ class job1 extends StatelessWidget {
             child: Column(children: [
           SizedBox(
             height: 30,
-          ), Container(
-                padding: EdgeInsets.only( top: 70,),
-
-              ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              top: 70,
+            ),
+          ),
           Align(
             alignment: Alignment.bottomRight,
             child: Text(
@@ -197,9 +199,8 @@ class job1 extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
-            width: screenSize.width*0.9,
+            width: screenSize.width * 0.9,
             child: RichText(
                 textDirection: TextDirection.rtl,
                 text: TextSpan(
@@ -208,15 +209,15 @@ class job1 extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.grey[850]),
                     children: <TextSpan>[
-                  TextSpan(
-                    text:
-                        "يعمل مطور البرمجيات ضمن فريق تطوير البرمجيات، ويساهم في ابتكار وإنشاء برمجيات الشركة وبرامجها. ويعمل غالباً لصالح الصناعات الثقيلة أو الشركات الضخمة جنباً إلى جنب مع فريق من المبرمجين لوضع أكواد للبرامج تلبي حاجة الشركة أو العميل، ويسعى مطوّر البرمجيات إلى تسهيل تصميم البرمجيات وتنفيذها على الوجه المطلوب، حيث يعدّ مطور البرمجيات هو الخبير الأساسي في إنشاء تجربة برمجية سلسلة للعملاء بدءاً من الترميز التفصيلي للحاسب إلى التصميم المبتكر. ويحمل مطوّر البرمجيات عادةً إجازةً جامعية في علوم الحاسب أو هندسة الحاسب، ويركّز عمله على الجوانب التقنية والتصميمية لبرمجيات أي مشروع.",
-                    style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        color: Colors.black,
-                        fontSize: 17.0),
-                  ),
-                ])),
+                      TextSpan(
+                        text:
+                            "يعمل مطور البرمجيات ضمن فريق تطوير البرمجيات، ويساهم في ابتكار وإنشاء برمجيات الشركة وبرامجها. ويعمل غالباً لصالح الصناعات الثقيلة أو الشركات الضخمة جنباً إلى جنب مع فريق من المبرمجين لوضع أكواد للبرامج تلبي حاجة الشركة أو العميل، ويسعى مطوّر البرمجيات إلى تسهيل تصميم البرمجيات وتنفيذها على الوجه المطلوب، حيث يعدّ مطور البرمجيات هو الخبير الأساسي في إنشاء تجربة برمجية سلسلة للعملاء بدءاً من الترميز التفصيلي للحاسب إلى التصميم المبتكر. ويحمل مطوّر البرمجيات عادةً إجازةً جامعية في علوم الحاسب أو هندسة الحاسب، ويركّز عمله على الجوانب التقنية والتصميمية لبرمجيات أي مشروع.",
+                        style: TextStyle(
+                            fontStyle: FontStyle.normal,
+                            color: Colors.black,
+                            fontSize: 17.0),
+                      ),
+                    ])),
           ),
           Divider(
             height: 20,
@@ -226,22 +227,44 @@ class job1 extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: Text(
-              'الموقع     ',
-              style: TextStyle(
-                  fontStyle: FontStyle.normal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: <Widget>[
+                      Text(
+                        'الموقع',
+                        style: TextStyle(
+                            fontStyle: FontStyle.normal,
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17.0),
+                      ),
+                    ]),
+                Icon(
+                  Icons.location_on,
                   color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0),
+                  size: 30,
+                ),
+                Text(
+                  '     ',
+                  style: TextStyle(
+                      fontStyle: FontStyle.normal,
+                      color: Colors.grey[350],
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0),
+                ),
+              ],
             ),
           ),
-              Container(
-                  //margin: EdgeInsets.fromLTRB(0, 80, 200, 0),
-                  width: 400,
-                  height: 400,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('images/location.jpg')))),
+          Container(
+              //margin: EdgeInsets.fromLTRB(0, 80, 200, 0),
+              width: 400,
+              height: 400,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('images/location.jpg')))),
           SizedBox(height: 50),
           Container(
             width: MediaQuery.of(context).size.width * 0.8,
@@ -256,7 +279,7 @@ class job1 extends StatelessWidget {
               ),
             ),
           ),
-              SizedBox(height: 50),
+          SizedBox(height: 50),
         ])));
   }
 }
