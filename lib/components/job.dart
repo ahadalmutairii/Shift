@@ -22,7 +22,7 @@ class job extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Text(
-                  'تالاتن وظيفية',
+                  'عرض وظيفية',
                   style: TextStyle(
                       fontStyle: FontStyle.normal,
                       color: Colors.black87,
