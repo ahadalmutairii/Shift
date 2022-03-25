@@ -163,7 +163,7 @@ class _NavBarState extends State<NavBar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined),
-            label: 'الف',
+            label: 'التقديمات',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
