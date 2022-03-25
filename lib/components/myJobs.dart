@@ -53,13 +53,13 @@ class myJobs extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      "ساره خالد",
+                      "  ساره خالد     ",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Comfortaa',
                           fontWeight: FontWeight.w700,
-                          fontSize: 35),
+                          fontSize: 28),
                     ),
                     ClipOval(
                       child: Material(
@@ -71,7 +71,7 @@ class myJobs extends StatelessWidget {
                           //         fit: BoxFit.cover,
                           //       )
                           child: Icon(Icons.person,
-                              size: 100, color: Colors.grey)),
+                              size: 80, color: Colors.grey)),
                     ),
                     SizedBox(
                       width: 20,
@@ -142,7 +142,7 @@ class myJobs extends StatelessWidget {
                                           bottomRight:
                                               const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/sdaia.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -225,7 +225,7 @@ class myJobs extends StatelessWidget {
                                           bottomRight:
                                               const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/tahakom.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -307,7 +307,7 @@ class myJobs extends StatelessWidget {
                                           bottomRight:
                                               const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/saudi.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -391,7 +391,7 @@ class myJobs extends StatelessWidget {
                                           bottomRight:
                                               const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/sdaia.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,
@@ -474,7 +474,7 @@ class myJobs extends StatelessWidget {
                                           bottomRight:
                                               const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
+                                        'images/sdaia.png',
                                         //   width: 200,
                                         height: 120,
                                         fit: BoxFit.cover,

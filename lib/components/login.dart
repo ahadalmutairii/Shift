@@ -100,12 +100,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
                   ),
                   onPressed: () {
+
                     print(nameController.text);
                     print(passwordController.text);
+                    if(nameController.text.isNotEmpty&&passwordController.text.isNotEmpty){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const NavBar()),
-                    );
+                    );}
                   },
                 )),
             Row(

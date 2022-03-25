@@ -147,22 +147,26 @@ class Profile extends StatelessWidget {
                     bottomLeft: const Radius.circular(20)),
                 child: Container(
                     width: 180,
-                    height: 120,
+                    height: 180,
                     color: Colors.lightBlueAccent[100],
                     child: Column(
                       children: [
                           SizedBox(
                           height: 10,
+                        ), Text(
+                          "",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                         Text(
-                          "مجموع الساعات التطوعية",
+                          " ساعات العمل ",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                          Text(
                           "20",
                           textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.w700),
+                          style: TextStyle(fontSize: 30, color: Colors.white,fontWeight: FontWeight.w700),
                         ),
                           Text(
                           "ساعة",
@@ -184,26 +188,39 @@ class Profile extends StatelessWidget {
                     bottomLeft: const Radius.circular(20)),
                 child: Container(
                     width: 180,
-                     height: 120,
+                     height: 180,
                     color: Colors.lightBlueAccent[100],
                     child: Column(
                       children: [
-                        SizedBox(height: 10,),
+                        SizedBox(height: 10,), Text(
+                          "",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
                         Text(
                           "الشهادات",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20, color: Colors.white,),
                         ),
                          Text(
-                          "2",
+                          "02",
                           textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 40, color: Colors.white,fontWeight: FontWeight.w700),
+                          style: TextStyle(fontSize: 30, color: Colors.white,fontWeight: FontWeight.w700),
+                        ),
+                        Text(
+                          "شهادة",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                        
                         
                       ],
                     )),
               ),
+                      Container(
+                        padding: EdgeInsets.only( top: 10,),
+
+                      ),
     
     
                   ],),

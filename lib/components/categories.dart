@@ -118,9 +118,9 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 220,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.lightBlue,
                       child: Text(
-                        "التدريب التعاوني",
+                        "تدريب",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -141,7 +141,7 @@ class Categories extends StatelessWidget {
                       // )
                     ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
                     onTap: () {
@@ -163,9 +163,9 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 170,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlueAccent,
+                      color: Colors.lightBlue,
                       child: Text(
-                        "فرص العمل",
+                        "عمل",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -186,7 +186,7 @@ class Categories extends StatelessWidget {
                       // )
                     ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
                      onTap: () {

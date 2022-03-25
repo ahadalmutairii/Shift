@@ -15,11 +15,12 @@ class HomeBody extends StatelessWidget {
         children: [PreferredSize(
             preferredSize: Size.fromHeight(50.0),
             child: SearchBar()
-          ),SizedBox(height:30),
+          ),
          Container(
            width:380,
            child: Text("الأقسام",textAlign: TextAlign.end,style: TextStyle(color:Colors.black,fontSize: 25,fontWeight: FontWeight.w700),)),Categories(),
-           Container(
+
+          Container(
               width: 380,
               child: Text("الفرص المرشحة لك",
             textAlign: TextAlign.end,

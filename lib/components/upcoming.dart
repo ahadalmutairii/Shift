@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shift/components/job.dart';
+import 'package:shift/components/job1.dart';
 
 class Upcomming extends StatelessWidget {
   const Upcomming({Key? key}) : super(key: key);
@@ -128,7 +128,7 @@ class Upcomming extends StatelessWidget {
                      onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const job()),
+                      MaterialPageRoute(builder: (context) => const job1()),
                     );
                   },
                 )),
@@ -251,7 +251,7 @@ class Upcomming extends StatelessWidget {
                      
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const job()),
+                      MaterialPageRoute(builder: (context) => const job1()),
                     );               
                   },
                 )),
@@ -372,7 +372,7 @@ class Upcomming extends StatelessWidget {
                      onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const job()),
+                      MaterialPageRoute(builder: (context) => const job1()),
                     );
                   },
                 )),

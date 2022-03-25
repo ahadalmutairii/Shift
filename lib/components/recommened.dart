@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shift/components/job.dart';
 import 'package:shift/components/job1.dart';
 
 class Recommended extends StatelessWidget {
@@ -246,7 +245,7 @@ class Recommended extends StatelessWidget {
                      onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const job()),
+                      MaterialPageRoute(builder: (context) => const job1()),
                     );
                   },
                 )),
@@ -366,7 +365,7 @@ class Recommended extends StatelessWidget {
                      onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const job()),
+                      MaterialPageRoute(builder: (context) => const job1()),
                     );
                   },
                 )),

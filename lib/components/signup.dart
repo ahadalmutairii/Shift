@@ -189,12 +189,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   child: const Text('إنشاء حساب'),
 
                   onPressed: () {
+
                     print(nameController.text);
                     print(passwordController.text);
-                    Navigator.push(
+                     if(nameController.text.isNotEmpty&&passwordController.text.isNotEmpty){
+
+                       Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const login()),
-                    );
+                    );}
                   },
                 )
             ),
@@ -207,6 +210,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   style: TextStyle(fontSize: 15),
                 ),
                 onPressed: () {
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const login()),
