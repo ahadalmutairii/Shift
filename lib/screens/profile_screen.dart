@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shift/screens/my_info.dart';
 
 class Profile extends StatelessWidget {
   const Profile({ Key? key }) : super(key: key);
@@ -93,20 +94,26 @@ class Profile extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                    ClipRRect(
-            borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(20),
-                topRight: const Radius.circular(20),
-                bottomRight: const Radius.circular(20),
-                bottomLeft: const Radius.circular(20)),
-                    child: Container(
-                      width: 150,
-                      color: Colors.lightBlueAccent,
-                      child: Text("بياناتي",textAlign: TextAlign.center, style: TextStyle(fontSize:30,color: Colors.white),
-                    )
-                                
-                    ),
-                  ),
+                    GestureDetector(
+                      child: ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(20),
+                                    topRight: const Radius.circular(20),
+                                    bottomRight: const Radius.circular(20),
+                                    bottomLeft: const Radius.circular(20)),
+                      child: Container(
+                        width: 150,
+                        color: Colors.lightBlueAccent,
+                        child: Text("بياناتي",textAlign: TextAlign.center, style: TextStyle(fontSize:30,color: Colors.white),
+                      )
+                                  
+                      ),
+                                      ),
+                    onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyInfo()),
+                    );                  },),
                   SizedBox(
             height: 30,
           ),
