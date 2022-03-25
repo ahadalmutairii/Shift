@@ -9,7 +9,6 @@ import 'package:shift/components/search_bar.dart';
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
