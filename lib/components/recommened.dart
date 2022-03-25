@@ -73,12 +73,12 @@ class Recommended extends StatelessWidget {
                           Row(
                             children: <Widget>[
                               SizedBox(
-                                width: 40.0,
+                                width: 0.0,
                               ),
                               Container(
                                 width: 150,
                                 child: Text(
-                                  "Biology Research Paper Participation",
+                                  "Paper Participation",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w500,
@@ -86,6 +86,7 @@ class Recommended extends StatelessWidget {
                                       fontFamily: "Comfortaa"),
                                 ),
                               ),
+                            
                               // Text(
                               // "..",
 
@@ -97,6 +98,22 @@ class Recommended extends StatelessWidget {
                               // )
                             ],
                           ),
+                          SizedBox(height: 10,),
+                          Row(children: [SizedBox(width: 145,),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  child: Text("200 SR",style:TextStyle(fontSize: 15)),
+                                ),
+                              )
+                            ],)
+                        
                         ],
                       ),
                     ),
@@ -191,6 +208,27 @@ class Recommended extends StatelessWidget {
                               // )
                             ],
                           ),
+                         
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 145,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  child: Text("200 SR",
+                                      style: TextStyle(fontSize: 15)),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -285,6 +323,27 @@ class Recommended extends StatelessWidget {
                               // )
                             ],
                           ),
+                         
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 145,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  child: Text("200 SR",
+                                      style: TextStyle(fontSize: 15)),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ),
