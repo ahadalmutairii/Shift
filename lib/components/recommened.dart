@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shift/components/job.dart';
+import 'package:shift/components/job1.dart';
 
 class Recommended extends StatelessWidget {
   const Recommended({Key? key}) : super(key: key);
@@ -121,7 +123,12 @@ class Recommended extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                  onTap: () {},
+                     onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const job1()),
+                    );
+                  },
                 )),
             Padding(
                 padding: const EdgeInsets.all(8),
@@ -236,7 +243,12 @@ class Recommended extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                  onTap: () {},
+                     onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const job()),
+                    );
+                  },
                 )),
                  Padding(
                 padding: const EdgeInsets.all(8),
@@ -351,7 +363,12 @@ class Recommended extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                  onTap: () {},
+                     onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const job()),
+                    );
+                  },
                 )),
           ],
         ),

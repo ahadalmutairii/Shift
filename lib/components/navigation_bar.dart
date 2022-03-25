@@ -26,7 +26,7 @@ class _NavBarState extends State<NavBar> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
    MyHomePage(),
-    jobs(),
+    event(),
     volunteering(),
     Profile(),
 
@@ -166,11 +166,11 @@ class _NavBarState extends State<NavBar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business_center),
-            label: 'الفعاليات',
+            label: 'الجهات',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined),
-            label: 'الوظائف',
+            label: 'الف',
           ),
            BottomNavigationBarItem(
             icon: Icon(Icons.person),

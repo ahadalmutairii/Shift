@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shift/components/COOP.dart';
+import 'package:shift/components/Jobs.dart';
+import 'package:shift/components/volunteering.dart';
 
 class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
@@ -11,88 +14,98 @@ class Categories extends StatelessWidget {
       child: Expanded(
         child: Row(
           children: [
-            Padding(
-                padding: const EdgeInsets.all(0),
-                //  const EdgeInsets.only(right: 70),
-                child: GestureDetector(
-                  child: Card(
-                    semanticContainer: true,
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    elevation: 3.0,
-                    child: Container(
-                      height: 40,
-                      width: 150,
-                      margin: EdgeInsets.all(0),
-                      color: Colors.lightBlueAccent,
-                      child: 
-                              Text(
-                                  "التطوع",textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 25,
-                                      fontFamily: "Comfortaa",),
-                                ),
+            // Padding(
+            //     padding: const EdgeInsets.all(0),
+            //     //  const EdgeInsets.only(right: 70),
+            //     child: GestureDetector(
+            //       child: Card(
+            //         semanticContainer: true,
+            //         clipBehavior: Clip.antiAliasWithSaveLayer,
+            //         elevation: 3.0,
+            //         child: Container(
+            //           height: 40,
+            //           width: 150,
+            //           margin: EdgeInsets.all(0),
+            //           color: Colors.lightBlueAccent,
+            //           child: 
+            //                   Text(
+            //                       "التطوع",textAlign: TextAlign.center,
+            //                       style: TextStyle(
+            //                           color: Colors.white,
+            //                           fontWeight: FontWeight.w800,
+            //                           fontSize: 25,
+            //                           fontFamily: "Comfortaa",),
+            //                     ),
                               
-                              // Text(
-                              // "..",
+            //                   // Text(
+            //                   // "..",
 
-                              //   style: TextStyle(
-                              //       color: Colors.grey[600],
-                              //       fontWeight: FontWeight.w500,
-                              //       fontSize: 15,
-                              //       fontFamily: "Comfortaa"),
-                              // )
+            //                   //   style: TextStyle(
+            //                   //       color: Colors.grey[600],
+            //                   //       fontWeight: FontWeight.w500,
+            //                   //       fontSize: 15,
+            //                   //       fontFamily: "Comfortaa"),
+            //                   // )
                        
-                      ),
+            //           ),
                     
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  onTap: () {},
-                )),
-             Padding(
-                padding: const EdgeInsets.all(0),
-                //  const EdgeInsets.only(right: 70),
-                child: GestureDetector(
-                  child: Card(
-                    semanticContainer: true,
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    elevation: 3.0,
-                    child: Container(
-                      height: 40,
-                      width: 150,
-                      margin: EdgeInsets.all(0),
-                      color: Colors.lightBlueAccent,
-                      child: 
-                              Text(
-                                  "النوادي",textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 25,
-                                      fontFamily: "Comfortaa",),
-                                ),
+            //         shape: RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(20.0),
+            //         ),
+            //       ),
+            //          onTap: () {
+            //         Navigator.push(
+            //           context,
+            //           MaterialPageRoute(builder: (context) => const volunteering()),
+            //         );
+            //       },
+            //     )),
+            //  Padding(
+            //     padding: const EdgeInsets.all(0),
+            //     //  const EdgeInsets.only(right: 70),
+            //     child: GestureDetector(
+            //       child: Card(
+            //         semanticContainer: true,
+            //         clipBehavior: Clip.antiAliasWithSaveLayer,
+            //         elevation: 3.0,
+            //         child: Container(
+            //           height: 40,
+            //           width: 150,
+            //           margin: EdgeInsets.all(0),
+            //           color: Colors.lightBlueAccent,
+            //           child: 
+            //                   Text(
+            //                       "النوادي",textAlign: TextAlign.center,
+            //                       style: TextStyle(
+            //                           color: Colors.white,
+            //                           fontWeight: FontWeight.w800,
+            //                           fontSize: 25,
+            //                           fontFamily: "Comfortaa",),
+            //                     ),
                               
-                              // Text(
-                              // "..",
+            //                   // Text(
+            //                   // "..",
 
-                              //   style: TextStyle(
-                              //       color: Colors.grey[600],
-                              //       fontWeight: FontWeight.w500,
-                              //       fontSize: 15,
-                              //       fontFamily: "Comfortaa"),
-                              // )
+            //                   //   style: TextStyle(
+            //                   //       color: Colors.grey[600],
+            //                   //       fontWeight: FontWeight.w500,
+            //                   //       fontSize: 15,
+            //                   //       fontFamily: "Comfortaa"),
+            //                   // )
                        
-                      ),
+            //           ),
                     
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  onTap: () {},
-                )),
+            //         shape: RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(20.0),
+            //         ),
+            //       ),
+            //          onTap: () {
+            //         Navigator.push(
+            //           context,
+            //           MaterialPageRoute(builder: (context) => const volunteering()),//here
+            //         );
+            //       },
+            //     )),
                  Padding(
                 padding: const EdgeInsets.all(0),
                 //  const EdgeInsets.only(right: 70),
@@ -131,7 +144,12 @@ class Categories extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                  onTap: () {},
+                    onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const COOP()),
+                    );
+                  },
                 )),
                  Padding(
                 padding: const EdgeInsets.all(0),
@@ -171,7 +189,12 @@ class Categories extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
-                  onTap: () {},
+                     onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const jobs()),
+                    );
+                  },
                 )),
           ],
         ),
