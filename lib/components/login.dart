@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:shift/components/navigation_bar.dart';
 
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
@@ -100,6 +101,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const NavBar()),
+                    );
                   },
                 )
             ),
