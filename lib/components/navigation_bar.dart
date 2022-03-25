@@ -8,6 +8,7 @@ import 'package:shift/components/volunteering.dart';
 import 'package:shift/components/COOP.dart';
 import 'package:shift/components/login.dart';
 import 'package:shift/screens/profile_screen.dart';
+import 'package:shift/components/signup.dart';
 
 
 
@@ -26,7 +27,8 @@ class _NavBarState extends State<NavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
    MyHomePage(),
     jobs(),
-    job(),
+    signup(),
+    //job(),
     Profile(),
     // login(),
     // COOP(),
