@@ -21,9 +21,12 @@ class job1 extends StatelessWidget {
             child: Column(children: [
           SizedBox(
             height: 30,
-          ),
+          ), Container(
+                padding: EdgeInsets.only( top: 70,),
+
+              ),
           Align(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomRight,
             child: Text(
               'فرصة وظيفية',
               style: TextStyle(
@@ -196,7 +199,7 @@ class job1 extends StatelessWidget {
           ),
 
           Container(
-            width: screenSize.width,
+            width: screenSize.width*0.9,
             child: RichText(
                 textDirection: TextDirection.rtl,
                 text: TextSpan(

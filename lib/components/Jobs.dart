@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shift/components/search_bar.dart';
 
-
 class jobs extends StatelessWidget {
   const jobs({Key? key}) : super(key: key);
 
