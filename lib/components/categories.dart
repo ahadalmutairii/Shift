@@ -22,12 +22,12 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 150,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlue,
+                      color: Colors.lightBlueAccent,
                       child: 
                               Text(
                                   "التطوع",textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      color: Colors.black,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w800,
                                       fontSize: 25,
                                       fontFamily: "Comfortaa",),
@@ -63,12 +63,12 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 150,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlue,
+                      color: Colors.lightBlueAccent,
                       child: 
                               Text(
                                   "النوادي",textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      color: Colors.black,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.w800,
                                       fontSize: 25,
                                       fontFamily: "Comfortaa",),
@@ -104,12 +104,12 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 220,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlue,
+                      color: Colors.lightBlueAccent,
                       child: Text(
                         "التدريب التعاوني",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.w800,
                           fontSize: 25,
                           fontFamily: "Comfortaa",
@@ -144,12 +144,12 @@ class Categories extends StatelessWidget {
                       height: 40,
                       width: 170,
                       margin: EdgeInsets.all(0),
-                      color: Colors.lightBlue,
+                      color: Colors.lightBlueAccent,
                       child: Text(
                         "فرص العمل",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.w800,
                           fontSize: 25,
                           fontFamily: "Comfortaa",
