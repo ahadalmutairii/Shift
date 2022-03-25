@@ -27,13 +27,11 @@ class _NavBarState extends State<NavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
    MyHomePage(),
     jobs(),
-    signup(),
-    //job(),
+    volunteering(),
     Profile(),
-    // login(),
-    // COOP(),
+
     // event(),
-    // volunteering(),
+
 
   
   
