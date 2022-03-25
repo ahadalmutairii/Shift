@@ -7,6 +7,7 @@ class Upcomming extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      reverse:true,
       child: Expanded(
         child: Row(
           children: [
