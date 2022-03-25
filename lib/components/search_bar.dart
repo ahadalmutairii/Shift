@@ -17,14 +17,15 @@ class SearchBar extends StatelessWidget {
             color: Colors.white, borderRadius: BorderRadius.circular(5), ),
         child: Center(
           child: TextField(
-            
+            textAlign: TextAlign.right,
+
             decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.grey, width: 2.0),
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                prefixIcon: Icon(Icons.search),
-                suffixIcon: IconButton(
+                suffixIcon: Icon(Icons.search),
+                prefixIcon: IconButton(
                   icon: Icon(Icons.clear),
                   onPressed: () {
                     /* Clear the search field */
@@ -32,6 +33,7 @@ class SearchBar extends StatelessWidget {
                 ),
 
                 hintText: '...إبحث',
+
                 border: InputBorder.none),
           ),
         ),
