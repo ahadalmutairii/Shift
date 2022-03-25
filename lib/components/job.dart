@@ -17,20 +17,76 @@ class job extends StatelessWidget {
           body: SingleChildScrollView(
             child: Column(
               children: [
+                 Container(
+                  padding: EdgeInsets.only( top: 30,),
 
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'فرصة وظيفية',
+                    style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40.0),
+                  ),
+                ),
                 Container(
 
-                  padding: EdgeInsets.only(top: 75,right: 30, left: 30),
+                  //padding: EdgeInsets.only(top: 30,right: 30, left: 30),
                   child: Column(
                     children: [
 
 
-                Container(
-                  padding: EdgeInsets.only( top: 10,),
+               Container(
+                  padding: EdgeInsets.only( top: 10,right: 30),
 
                 ),
 
-                                AspectRatio(
+
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(width: 20),
+                            Container(
+                                child:   Image.asset(
+                                    "images/tahakom.png", scale:2)),
+                            //SizedBox(width:90),
+                            Align(
+                                alignment: Alignment.centerRight,
+                            child:Text(
+                              'كلية إدارة الاعمال',
+                              style: TextStyle(
+                                  fontStyle: FontStyle.normal,
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18.0),
+                            ),),
+                            Divider(
+                                height: 20,
+                                color: Colors.black,
+                                thickness: 3),]),
+
+                     /* Container(
+                          margin: EdgeInsets.fromLTRB(0, 0, 250, 0),
+                          //width: 180,
+                          height: 80,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('images/tahakom.png'))),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            'كلية إدارة الاعمال     ',
+                            style: TextStyle(
+                                fontStyle: FontStyle.normal,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0),
+                          )),),*/
+
+                              /*  AspectRatio(
                                     aspectRatio: 2,
                                     child: ClipRRect(
 
@@ -40,17 +96,17 @@ class job extends StatelessWidget {
                                           bottomLeft: const Radius.circular(20),
                                           bottomRight: const Radius.circular(20)),
                                       child: Image.asset(
-                                        'images/carnival.jpg',
-                                      //  width: 100,
+                                        'images/tahakom.png',
+                                        width: 30,
                                         height: 120,
                                         fit: BoxFit.cover,
                                       ),
-                                    )),
+                                    )),*/
 
-                Container(
+                /*Container(
                   padding: EdgeInsets.only( top: 20),
 
-                ),
+                ),*/
                       Align(
                         alignment: Alignment.center,
                         child: Text(
@@ -65,7 +121,7 @@ class job extends StatelessWidget {
                                 Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                                      'كلية إدارة الاعمال',
+                                      'كلية إدارة الاعمال    ',
                                       style: TextStyle(
                                           fontStyle: FontStyle.normal,
                                           color: Colors.blue,
