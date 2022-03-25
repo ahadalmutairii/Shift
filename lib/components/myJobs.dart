@@ -61,17 +61,31 @@ class myJobs extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                           fontSize: 28),
                     ),
-                    ClipOval(
-                      child: Material(
-                          color: Colors.grey[200],
-                          // child: Image.asset(
-                          //         'images/profile_page.png',
-                          //         width: 150,
-                          //         height: 150,
-                          //         fit: BoxFit.cover,
-                          //       )
-                          child:
-                              Icon(Icons.person, size: 80, color: Colors.grey)),
+                   ClipOval(
+                      child: Container(
+                        width: 140,
+                        padding: EdgeInsets.all(8),
+                        color: Colors.blue[100],
+                        child: ClipOval(
+                          child: Center(
+                            child: Stack(children: [
+                              ClipOval(
+                                child: Material(
+                                    color: Colors.grey[200],
+                                    child: Image.asset(
+                                      'images/profile_img.png',
+                                     
+                                      fit: BoxFit.cover,
+                                    )
+                                    // child:
+                                    // Icon(Icons.person,size: 140,color:Colors.grey)
+
+                                    ),
+                              ),
+                            ]),
+                          ),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       width: 20,
