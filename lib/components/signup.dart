@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shift/components/login.dart';
+
+
+
 // Initial Selected Value
 String dropdownvalue = 'أنثى';
 
@@ -187,6 +191,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const login()),
+                    );
                   },
                 )
             ),
@@ -194,14 +202,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               children: <Widget>[
                 TextButton(
 
-                  child: const Text(
-                    'تسجيل الدخول',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () {
-                    //signup screen
-                  },
-                )
+                child: const Text(
+                  'تسجيل الدخول',
+                  style: TextStyle(fontSize: 15),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const login()),
+                  );
+                },
+              ),
+                const Text('لديك حساب؟'),
+
               ],
               mainAxisAlignment: MainAxisAlignment.center,
             ),

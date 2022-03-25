@@ -36,7 +36,7 @@ class start extends StatelessWidget {
       SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height:150),
+            SizedBox(height:250),
 
             Align(
               alignment: Alignment.bottomCenter,
@@ -53,7 +53,7 @@ class start extends StatelessWidget {
 
                   child: const Text(
                     'إبدا هنا',
-                    style: TextStyle(fontSize: 15),
+                    style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
                     Navigator.push(
