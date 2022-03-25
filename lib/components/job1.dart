@@ -194,9 +194,11 @@ class job1 extends StatelessWidget {
               ],
             ),
           ),
+
           Container(
             width: screenSize.width,
             child: RichText(
+                textDirection: TextDirection.rtl,
                 text: TextSpan(
                     style: TextStyle(
                         fontSize: 23,
@@ -210,7 +212,7 @@ class job1 extends StatelessWidget {
                         fontStyle: FontStyle.normal,
                         color: Colors.black,
                         fontSize: 17.0),
-                  )
+                  ),
                 ])),
           ),
           Divider(
