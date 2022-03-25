@@ -21,7 +21,7 @@ class Recommended extends StatelessWidget {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     elevation: 3.0,
                     child: Container(
-                      height: 200,
+                      height: 210,
                       width: 200,
                       margin: EdgeInsets.all(10),
                       color: Colors.white,
@@ -132,7 +132,7 @@ class Recommended extends StatelessWidget {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     elevation: 3.0,
                     child: Container(
-                      height: 200,
+                      height: 210,
                       width: 200,
                       margin: EdgeInsets.all(10),
                       color: Colors.white,
@@ -247,7 +247,7 @@ class Recommended extends StatelessWidget {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     elevation: 3.0,
                     child: Container(
-                      height: 200,
+                      height: 210,
                       width: 200,
                       margin: EdgeInsets.all(10),
                       color: Colors.white,
