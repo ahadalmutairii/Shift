@@ -21,9 +21,12 @@ class job1 extends StatelessWidget {
             child: Column(children: [
           SizedBox(
             height: 30,
-          ),
+          ), Container(
+                padding: EdgeInsets.only( top: 70,),
+
+              ),
           Align(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomRight,
             child: Text(
               'فرصة وظيفية',
               style: TextStyle(
@@ -89,7 +92,7 @@ class job1 extends StatelessWidget {
                               fontSize: 17.0),
                         ),
                         Text(
-                          "4000 ريال",
+                          "4000 ريال  ",
                           style: TextStyle(
                               fontStyle: FontStyle.normal,
                               color: Colors.black,
@@ -194,9 +197,11 @@ class job1 extends StatelessWidget {
               ],
             ),
           ),
+
           Container(
-            width: screenSize.width,
+            width: screenSize.width*0.9,
             child: RichText(
+                textDirection: TextDirection.rtl,
                 text: TextSpan(
                     style: TextStyle(
                         fontSize: 23,
@@ -210,7 +215,7 @@ class job1 extends StatelessWidget {
                         fontStyle: FontStyle.normal,
                         color: Colors.black,
                         fontSize: 17.0),
-                  )
+                  ),
                 ])),
           ),
           Divider(
@@ -230,7 +235,14 @@ class job1 extends StatelessWidget {
                   fontSize: 20.0),
             ),
           ),
-          SizedBox(height: 250),
+              Container(
+                  //margin: EdgeInsets.fromLTRB(0, 80, 200, 0),
+                  width: 400,
+                  height: 400,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('images/location.jpg')))),
+          SizedBox(height: 50),
           Container(
             width: MediaQuery.of(context).size.width * 0.8,
             height: MediaQuery.of(context).size.height * 0.07,
@@ -244,6 +256,7 @@ class job1 extends StatelessWidget {
               ),
             ),
           ),
+              SizedBox(height: 50),
         ])));
   }
 }

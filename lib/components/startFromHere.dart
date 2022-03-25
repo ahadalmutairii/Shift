@@ -11,7 +11,9 @@ class start extends StatelessWidget {
 
   return MaterialApp(
   home: Scaffold(
+    extendBodyBehindAppBar: true,
   backgroundColor: Colors.white,
+
   body: const MyStatefulWidget(),
 
   ),
@@ -34,9 +36,11 @@ class start extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       SingleChildScrollView(
+
         child: Column(
           children: [
-            SizedBox(height:150),
+
+            SizedBox(height:250),
 
             Align(
               alignment: Alignment.bottomCenter,
@@ -53,7 +57,7 @@ class start extends StatelessWidget {
 
                   child: const Text(
                     'إبدا هنا',
-                    style: TextStyle(fontSize: 15),
+                    style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
                     Navigator.push(
