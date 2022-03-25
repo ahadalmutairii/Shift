@@ -96,6 +96,27 @@ class Upcomming extends StatelessWidget {
                               // )
                             ],
                           ),
+                        
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 145,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  child: Text("200 SR",
+                                      style: TextStyle(fontSize: 15)),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -190,6 +211,29 @@ class Upcomming extends StatelessWidget {
                               // )
                             ],
                           ),
+                        
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 145,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  
+                                    child: Text("200 SR",
+                                        style: TextStyle(fontSize: 15)),
+                                  ),
+                              ),
+                              
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -284,6 +328,28 @@ class Upcomming extends StatelessWidget {
                               // )
                             ],
                           ),
+                        
+                      
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 145,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: const Radius.circular(5),
+                                    topRight: const Radius.circular(5),
+                                    bottomRight: const Radius.circular(5),
+                                    bottomLeft: const Radius.circular(5)),
+                                child: Container(
+                                  height: 20,
+                                  color: Colors.lightBlueAccent,
+                                  child: Text("200 SR",
+                                      style: TextStyle(fontSize: 15)),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ),
