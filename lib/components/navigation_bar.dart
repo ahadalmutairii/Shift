@@ -5,30 +5,16 @@ import 'package:shift/components/Jobs.dart';
 import 'package:shift/screens/home_screen.dart';
 
 
-void main() => runApp(const NavBar());
 
-class NavBar extends StatelessWidget {
+
+class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
-  }
+  State<NavBar> createState() => _NavBarState();
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);

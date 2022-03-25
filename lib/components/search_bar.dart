@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
 
-class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
+class SearchBar extends StatelessWidget {
+  const SearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return  AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
           // The search area here
           title: Container(
         width: double.infinity,
         height: 40,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(5)),
+            color: Colors.white, borderRadius: BorderRadius.circular(5), ),
         child: Center(
           child: TextField(
             decoration: InputDecoration(
@@ -28,7 +29,7 @@ class SearchPage extends StatelessWidget {
                 border: InputBorder.none),
           ),
         ),
-      )),
+      ),
     );
   }
 }
