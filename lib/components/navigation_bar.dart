@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 //import 'package:shift/components/Main.dart';
 import 'package:shift/components/events.dart';
 import 'package:shift/components/Jobs.dart';
+import 'package:shift/components/job.dart';
 import 'package:shift/screens/home_screen.dart';
 import 'package:shift/components/volunteering.dart';
+import 'package:shift/components/COOP.dart';
 
 
 
@@ -21,8 +23,10 @@ class _NavBarState extends State<NavBar> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
    MyHomePage(),
-    event(),
     jobs(),
+    job(),
+    COOP(),
+    event(),
     volunteering(),
 
   
