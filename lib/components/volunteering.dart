@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shift/components/search_bar.dart';
 
 
-class jobs extends StatelessWidget {
-  const jobs({Key? key}) : super(key: key);
+class volunteering extends StatelessWidget {
+  const volunteering({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample';
 
@@ -25,7 +25,7 @@ class jobs extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text(
-                      'الوظائف',
+                      'فرص التطوع',
                       style: TextStyle(
                           fontStyle: FontStyle.normal,
                           color: Colors.black87,
@@ -104,7 +104,7 @@ class jobs extends StatelessWidget {
                                 Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                                      'مساعد اداري',
+                                      'منظم',
                                       style: TextStyle(
                                           fontStyle: FontStyle.normal,
                                           color: Colors.blue,
@@ -114,7 +114,7 @@ class jobs extends StatelessWidget {
                                 Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                                      'كلية إدارة الأعمال',
+                                      'جمعية إنسان',
                                       style: TextStyle(
                                           fontStyle: FontStyle.normal,
                                           color: Colors.grey,
@@ -184,7 +184,7 @@ class jobs extends StatelessWidget {
                                 Align(
                                     alignment: Alignment.topRight,
                                     child: Text(
-                                      'مطور تطبيقات',
+                                      'كاتب محتوى',
                                       style: TextStyle(
                                           fontStyle: FontStyle.normal,
                                           color: Colors.blue,
@@ -194,7 +194,7 @@ class jobs extends StatelessWidget {
                                 Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                                      'سدايا',
+                                      'جمعية بنيان',
                                       style: TextStyle(
                                           fontStyle: FontStyle.normal,
                                           color: Colors.grey,

@@ -17,15 +17,17 @@ class SearchBar extends StatelessWidget {
             color: Colors.white, borderRadius: BorderRadius.circular(5), ),
         child: Center(
           child: TextField(
+            textAlign: TextAlign.right,
             decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                suffixIcon: IconButton(
+                suffixIcon: Icon(Icons.search),
+                 prefixIcon: IconButton(
                   icon: Icon(Icons.clear),
                   onPressed: () {
                     /* Clear the search field */
                   },
                 ),
-                hintText: 'Search...',
+
+                hintText: '...إبحث',
                 border: InputBorder.none),
           ),
         ),

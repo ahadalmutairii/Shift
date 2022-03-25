@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shift/components/search_bar.dart';
 
 class event extends StatelessWidget {
   const event({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class event extends StatelessWidget {
 
                 Container(
 
-                  padding: EdgeInsets.only(top: 75,right: 30),
+                  padding: EdgeInsets.only(top: 75,right: 30, bottom: 0),
                       child:
                       Align(
                         alignment: Alignment.centerRight,
@@ -31,6 +32,10 @@ class event extends StatelessWidget {
                             fontSize: 40.0),
                       ),
                 ),),
+                PreferredSize(
+                    preferredSize: Size.fromHeight(50.0),
+                    child: SearchBar()
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -40,52 +45,7 @@ class event extends StatelessWidget {
                   ],
                 ),
 
-                Card(
 
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  elevation: 4.0,
-                  child: new InkWell(
-                    onTap: () {
-
-//                              طNavigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
-                    },
-
-                    child: Container(
-                      decoration: new BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0.0, 0.0),
-                            color: Colors.grey.withOpacity(0),
-                            blurRadius: 0.0,
-                          ),
-                        ],
-                        border: Border.all(color: Colors.black87),
-                        borderRadius: new BorderRadius.circular(20.0),
-                        color: Colors.white,
-                      ),
-                      width:  MediaQuery.of(context).size.width * 0.90,
-                      height: 50,
-                      child:   Container(
-                        padding: EdgeInsets.only(top: 10,right: 30),
-                        child: Column(
-                          children: <Widget>[
-                            Align(
-                                alignment: Alignment.topRight,
-                                child: Text(
-                                  'ابحث',
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20.0),
-                                )),
-                          ],),
-                      ),
-                    ),
-                  ),
-                ),
                 Container(
                   padding: EdgeInsets.only( top: 10,),
 
@@ -97,7 +57,7 @@ class event extends StatelessWidget {
                             Card(
 
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
+                                borderRadius: BorderRadius.circular(20.0),
                               ),
                               elevation: 4.0,
                               child: new InkWell(
@@ -110,30 +70,45 @@ class event extends StatelessWidget {
                                   decoration: new BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
-                                          offset: Offset(0.0, 0.0),
-                                          color: Colors.grey.withOpacity(0),
-                                          blurRadius: 0.0,
+                                          offset: Offset(0.0, 5.0),
+                                          color: Colors.grey.withOpacity(.7),
+                                          blurRadius: 5.0,
                                         ),
                                       ],
-                                    border: Border.all(color: Colors.blue),
+                                  //  border: Border.all(color: Colors.blue),
                                     borderRadius: new BorderRadius.circular(16.0),
                                     color: Colors.white,
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
+                                  height: 160,
                                   child:   Container(
-                                    padding: EdgeInsets.only(top: 10,right: 30),
+                                    padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
                                     child: Column(
                                         children: <Widget>[
+                                          AspectRatio(
+                                            aspectRatio: 3.5,
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: const Radius.circular(20),
+                                                  topRight: const Radius.circular(20),
+                                                bottomLeft: const Radius.circular(20),
+                                                bottomRight: const Radius.circular(20)),
+                                              child: Image.asset(
+                                                'images/carnival.jpg',
+                                                //   width: 200,
+                                                height: 120,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            )),
                                           Align(
-                                        alignment: Alignment.topRight,
+                                        alignment: Alignment.bottomRight,
                                         child: Text(
                                         'ورشة عمل إدارة المشاريع ',
                                         style: TextStyle(
                                             fontStyle: FontStyle.normal,
                                             color: Colors.blue,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
+                                            fontSize: 18.0),
                                       )),
                                           Align(
                                               alignment: Alignment.bottomRight,
@@ -143,18 +118,9 @@ class event extends StatelessWidget {
                                                     fontStyle: FontStyle.normal,
                                                     color: Colors.grey,
                                                     fontWeight: FontWeight.bold,
-                                                    fontSize: 20.0),
+                                                    fontSize: 15.0),
                                               )),
-                                          Align(
-                                              alignment: Alignment.bottomRight,
-                                              child: Text(
-                                                '  12-1 PM  اليوم',
-                                                style: TextStyle(
-                                                    fontStyle: FontStyle.italic,
-                                                    color: Colors.grey,
-                                                    fontWeight: FontWeight.normal,
-                                                    fontSize: 18.0),
-                                              )),
+
                                     ],),
                                   ),
                                 ),
@@ -168,38 +134,52 @@ class event extends StatelessWidget {
     Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
-                              ),
-                              elevation: 4.0,
-                              child: new InkWell(
-                                 onTap: () {
-                                  // BottomNavigationBar navigationBar =  _globalKey.currentWidget as BottomNavigationBar;
-                                  // navigationBar.onTap!(2);
+      Card(
 
-                              //nav
-                                            },
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        elevation: 4.0,
+        child: new InkWell(
+          onTap: () {
 
-                                child: Container(
-                                  decoration: new BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          offset: Offset(0.0, 0.0),
-                                          color: Colors.grey.withOpacity(0),
-                                          blurRadius: 0.0,
-                                        ),
-                                      ],
-                                      border: Border.all(color: Colors.blue),
-                                      borderRadius: new BorderRadius.circular(16.0),
-                                      color: Colors.white,
-                                  ),
-                                  width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
-                                  child:   Container(
-                                    padding: EdgeInsets.only(top: 10,right: 30),
-                                    child: Column(
-                                      children: <Widget>[
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+          },
+
+          child: Container(
+            decoration: new BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0.0, 5.0),
+                  color: Colors.grey.withOpacity(.7),
+                  blurRadius: 5.0,
+                ),
+              ],
+              //  border: Border.all(color: Colors.blue),
+              borderRadius: new BorderRadius.circular(16.0),
+              color: Colors.white,
+            ),
+            width:  MediaQuery.of(context).size.width * 0.90,
+            height: 160,
+            child:   Container(
+              padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+              child: Column(
+                children: <Widget>[
+                  AspectRatio(
+                      aspectRatio: 3.5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(20),
+                            topRight: const Radius.circular(20),
+                            bottomLeft: const Radius.circular(20),
+                            bottomRight: const Radius.circular(20)),
+                        child: Image.asset(
+                          'images/carnival.jpg',
+                          //   width: 200,
+                          height: 120,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
                                         Align(
                                             alignment: Alignment.topRight,
                                             child: Text(
@@ -220,16 +200,7 @@ class event extends StatelessWidget {
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 20.0),
                                             )),
-                                        Align(
-                                            alignment: Alignment.bottomRight,
-                                            child: Text(
-                                              '  9-2 PM  اليوم - الخميس',
-                                              style: TextStyle(
-                                                  fontStyle: FontStyle.italic,
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.normal,
-                                                  fontSize: 18.0),
-                                            )),
+
                                       ],),
                                 ),
                               ),
@@ -243,36 +214,52 @@ class event extends StatelessWidget {
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  elevation: 4.0,
-                  child: new InkWell(
-                    onTap: () {
-                      
-                   
-                    },
+                  Card(
 
-                    child: Container(
-                      decoration: new BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0.0, 0.0),
-                            color: Colors.grey.withOpacity(0),
-                            blurRadius: 0.0,
-                          ),
-                        ],
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: new BorderRadius.circular(16.0),
-                        color: Colors.white,
-                      ),
-                      width:  MediaQuery.of(context).size.width * 0.90,
-                      height: 110,
-                      child:   Container(
-                          padding: EdgeInsets.only(top: 10,right: 30),
-                        child: Column(
-                          children: <Widget>[
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 4.0,
+                    child: new InkWell(
+                      onTap: () {
+
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+                      },
+
+                      child: Container(
+                        decoration: new BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0.0, 5.0),
+                              color: Colors.grey.withOpacity(.7),
+                              blurRadius: 5.0,
+                            ),
+                          ],
+                          //  border: Border.all(color: Colors.blue),
+                          borderRadius: new BorderRadius.circular(16.0),
+                          color: Colors.white,
+                        ),
+                        width:  MediaQuery.of(context).size.width * 0.90,
+                        height: 160,
+                        child:   Container(
+                          padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+                          child: Column(
+                            children: <Widget>[
+                              AspectRatio(
+                                  aspectRatio: 3.5,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: const Radius.circular(20),
+                                        topRight: const Radius.circular(20),
+                                        bottomLeft: const Radius.circular(20),
+                                        bottomRight: const Radius.circular(20)),
+                                    child: Image.asset(
+                                      'images/carnival.jpg',
+                                      //   width: 200,
+                                      height: 120,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  )),
                             Align(
                                 alignment: Alignment.topRight,
                                 child: Text(
@@ -293,16 +280,7 @@ class event extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20.0),
                                 )),
-                            Align(
-                                alignment: Alignment.bottomRight,
-                                child: Text(
-                                  '  1-3 PM الثلاثاء',
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.italic,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 18.0),
-                                )),
+
                           ],),),
                     ),
                   ),
@@ -317,35 +295,51 @@ class event extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Card(
+
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
                       elevation: 4.0,
                       child: new InkWell(
                         onTap: () {
 
-
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
                         },
 
                         child: Container(
                           decoration: new BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                                offset: Offset(0.0, 5.0),
+                                color: Colors.grey.withOpacity(.7),
+                                blurRadius: 5.0,
                               ),
                             ],
-                            border: Border.all(color: Colors.blue),
+                            //  border: Border.all(color: Colors.blue),
                             borderRadius: new BorderRadius.circular(16.0),
                             color: Colors.white,
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
+                          height: 160,
                           child:   Container(
-                            padding: EdgeInsets.only(top: 10,right: 30),
+                            padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
                             child: Column(
                               children: <Widget>[
+                                AspectRatio(
+                                    aspectRatio: 3.5,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: const Radius.circular(20),
+                                          topRight: const Radius.circular(20),
+                                          bottomLeft: const Radius.circular(20),
+                                          bottomRight: const Radius.circular(20)),
+                                      child: Image.asset(
+                                        'images/carnival.jpg',
+                                        //   width: 200,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
                                 Align(
                                     alignment: Alignment.topRight,
                                     child: Text(
@@ -366,16 +360,7 @@ class event extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20.0),
                                     )),
-                                Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      '  12-1 PM اليوم',
-                                      style: TextStyle(
-                                          fontStyle: FontStyle.italic,
-                                          color: Colors.grey,
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 18.0),
-                                    )),
+
                               ],),),
                         ),
                       ),
@@ -389,35 +374,51 @@ class event extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Card(
+
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
                       elevation: 4.0,
                       child: new InkWell(
                         onTap: () {
 
-
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
                         },
 
                         child: Container(
                           decoration: new BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                                offset: Offset(0.0, 5.0),
+                                color: Colors.grey.withOpacity(.7),
+                                blurRadius: 5.0,
                               ),
                             ],
-                            border: Border.all(color: Colors.blue),
+                            //  border: Border.all(color: Colors.blue),
                             borderRadius: new BorderRadius.circular(16.0),
                             color: Colors.white,
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
+                          height: 160,
                           child:   Container(
-                            padding: EdgeInsets.only(top: 10,right: 30),
+                            padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
                             child: Column(
                               children: <Widget>[
+                                AspectRatio(
+                                    aspectRatio: 3.5,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: const Radius.circular(20),
+                                          topRight: const Radius.circular(20),
+                                          bottomLeft: const Radius.circular(20),
+                                          bottomRight: const Radius.circular(20)),
+                                      child: Image.asset(
+                                        'images/carnival.jpg',
+                                        //   width: 200,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
                                 Align(
                                     alignment: Alignment.topRight,
                                     child: Text(
@@ -438,16 +439,7 @@ class event extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20.0),
                                     )),
-                                Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      '  1-3 PM الثلاثاء',
-                                      style: TextStyle(
-                                          fontStyle: FontStyle.italic,
-                                          color: Colors.grey,
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 18.0),
-                                    )),
+
                               ],),),
                         ),
                       ),
