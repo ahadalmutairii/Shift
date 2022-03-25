@@ -16,14 +16,25 @@ class HomeBody extends StatelessWidget {
             preferredSize: Size.fromHeight(50.0),
             child: SearchBar()
           ),SizedBox(height:30),
-         Text("الأقسام",style: TextStyle(color:Colors.black,fontSize: 25,fontWeight: FontWeight.w700),),Categories(),Text("الفرص المرشحة لك",style: TextStyle(color:Colors.black,fontSize: 25,fontWeight: FontWeight.w700),),
+         Container(
+           width:380,
+           child: Text("الأقسام",textAlign: TextAlign.end,style: TextStyle(color:Colors.black,fontSize: 25,fontWeight: FontWeight.w700),)),Categories(),
+           Container(
+              width: 380,
+              child: Text("الفرص المرشحة لك",
+            textAlign: TextAlign.end,
+            style: TextStyle(color:Colors.black,fontSize: 25,fontWeight: FontWeight.w700),)),
         Recommended(),
-              Text(
-                "الفرص القادمة",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w700),
+              Container(
+                width: 380,
+                child: Text(
+                  "الفرص القادمة",
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w700),
+                ),
               ),
               Upcomming()
             ],
