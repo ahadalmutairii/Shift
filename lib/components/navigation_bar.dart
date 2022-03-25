@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shift/components/events.dart';
 import 'package:shift/components/Jobs.dart';
 import 'package:shift/screens/home_screen.dart';
+import 'package:shift/components/volunteering.dart';
 
 
 
@@ -22,10 +23,8 @@ class _NavBarState extends State<NavBar> {
    MyHomePage(),
     event(),
     jobs(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    volunteering(),
+
   
   
   ];
@@ -155,19 +154,19 @@ class _NavBarState extends State<NavBar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business_center),
-            label: 'Business',
+            label: 'الفعاليات',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined),
-            label: 'Schedule',
+            label: 'الوظائف',
           ),
            BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: 'حسابي',
           ),
         ],
         currentIndex: _selectedIndex,

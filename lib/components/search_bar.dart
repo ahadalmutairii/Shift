@@ -30,7 +30,8 @@ class SearchBar extends StatelessWidget {
                     /* Clear the search field */
                   },
                 ),
-                hintText: 'Search...',
+
+                hintText: '...إبحث',
                 border: InputBorder.none),
           ),
         ),

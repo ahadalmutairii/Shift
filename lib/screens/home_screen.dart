@@ -16,11 +16,11 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
-          
-           appBar:  AppBar(centerTitle: true, title: Text("شِفت",style: TextStyle(color:Colors.black,fontSize: 50),),backgroundColor: Colors.white,elevation: 0,),
+
+           appBar:  AppBar(centerTitle: true, title: Text("شِفت",style: TextStyle(color:Colors.black,fontSize: 50,),),backgroundColor: Colors.white,elevation: 0,),
   
-          body: 
-         
+          body:
+
                     
                   HomeBody()));
                   

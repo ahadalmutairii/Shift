@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shift/components/search_bar.dart';
 
 class event extends StatelessWidget {
   const event({Key? key}) : super(key: key);
@@ -17,18 +18,24 @@ class event extends StatelessWidget {
               children: [
 
                 Container(
-                  padding: EdgeInsets.only(top: 75,right: 30),
-                      child:  Align(
+
+                  padding: EdgeInsets.only(top: 75,right: 30, bottom: 0),
+                      child:
+                      Align(
                         alignment: Alignment.centerRight,
                         child: Text(
                         'الفعاليات',
                         style: TextStyle(
                             fontStyle: FontStyle.normal,
-                            color: Colors.blue,
+                            color: Colors.black87,
                             fontWeight: FontWeight.bold,
                             fontSize: 40.0),
                       ),
                 ),),
+                PreferredSize(
+                    preferredSize: Size.fromHeight(50.0),
+                    child: SearchBar()
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -37,7 +44,12 @@ class event extends StatelessWidget {
                     )
                   ],
                 ),
-        
+
+
+                Container(
+                  padding: EdgeInsets.only( top: 10,),
+
+                ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -45,7 +57,7 @@ class event extends StatelessWidget {
                             Card(
 
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
+                                borderRadius: BorderRadius.circular(20.0),
                               ),
                               elevation: 4.0,
                               child: new InkWell(
@@ -58,26 +70,59 @@ class event extends StatelessWidget {
                                   decoration: new BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
-                                          offset: Offset(0.0, 0.0),
-                                          color: Colors.grey.withOpacity(0),
-                                          blurRadius: 0.0,
+                                          offset: Offset(0.0, 5.0),
+                                          color: Colors.grey.withOpacity(.7),
+                                          blurRadius: 5.0,
                                         ),
                                       ],
-                                    border: Border.all(color: Colors.blue),
+                                  //  border: Border.all(color: Colors.blue),
                                     borderRadius: new BorderRadius.circular(16.0),
                                     color: Colors.white,
                                   ),
                                   width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'ورشة عمل إدارة المشاريع',
+                                  height: 160,
+                                  child:   Container(
+                                    padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+                                    child: Column(
+                                        children: <Widget>[
+                                          AspectRatio(
+                                            aspectRatio: 3.5,
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: const Radius.circular(20),
+                                                  topRight: const Radius.circular(20),
+                                                bottomLeft: const Radius.circular(20),
+                                                bottomRight: const Radius.circular(20)),
+                                              child: Image.asset(
+                                                'images/carnival.jpg',
+                                                //   width: 200,
+                                                height: 120,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            )),
+                                          Align(
+                                        alignment: Alignment.bottomRight,
+                                        child: Text(
+                                        'ورشة عمل إدارة المشاريع ',
                                         style: TextStyle(
                                             fontStyle: FontStyle.normal,
                                             color: Colors.blue,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
+                                            fontSize: 18.0),
                                       )),
+                                          Align(
+                                              alignment: Alignment.bottomRight,
+                                              child: Text(
+                                                'كلية إدارة الأعمال',
+                                                style: TextStyle(
+                                                    fontStyle: FontStyle.normal,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15.0),
+                                              )),
+
+                                    ],),
+                                  ),
                                 ),
                               ),
                             ),],),
@@ -89,47 +134,78 @@ class event extends StatelessWidget {
     Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-                            Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
-                              ),
-                              elevation: 4.0,
-                              child: new InkWell(
-                                 onTap: () {
-                                  // BottomNavigationBar navigationBar =  _globalKey.currentWidget as BottomNavigationBar;
-                                  // navigationBar.onTap!(2);
+      Card(
 
-                              //nav
-                                            },
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        elevation: 4.0,
+        child: new InkWell(
+          onTap: () {
 
-                                child: Container(
-                                  decoration: new BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          offset: Offset(0.0, 0.0),
-                                          color: Colors.grey.withOpacity(0),
-                                          blurRadius: 0.0,
-                                        ),
-                                      ],
-                                      border: Border.all(color: Colors.blue),
-                                      borderRadius: new BorderRadius.circular(16.0),
-                                      color: Colors.white,
-                                  ),
-                                  width:  MediaQuery.of(context).size.width * 0.90,
-                                  height: 110,
-                                  child: Center(
-                                      child: Text(
-                                        'Future you',
-                                        style: TextStyle(
-                                            fontStyle: FontStyle.normal,
-                                            color: Colors.blue,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0),
-                                      )),
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+          },
+
+          child: Container(
+            decoration: new BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0.0, 5.0),
+                  color: Colors.grey.withOpacity(.7),
+                  blurRadius: 5.0,
+                ),
+              ],
+              //  border: Border.all(color: Colors.blue),
+              borderRadius: new BorderRadius.circular(16.0),
+              color: Colors.white,
+            ),
+            width:  MediaQuery.of(context).size.width * 0.90,
+            height: 160,
+            child:   Container(
+              padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+              child: Column(
+                children: <Widget>[
+                  AspectRatio(
+                      aspectRatio: 3.5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(20),
+                            topRight: const Radius.circular(20),
+                            bottomLeft: const Radius.circular(20),
+                            bottomRight: const Radius.circular(20)),
+                        child: Image.asset(
+                          'images/carnival.jpg',
+                          //   width: 200,
+                          height: 120,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                                        Align(
+                                            alignment: Alignment.topRight,
+                                            child: Text(
+                                              'Future You ',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.normal,
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20.0),
+                                            )),
+                                        Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              'كلية الحاسب والمعلومات',
+                                              style: TextStyle(
+                                                  fontStyle: FontStyle.normal,
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20.0),
+                                            )),
+
+                                      ],),
                                 ),
                               ),
                             ),
-                          ],
+                            ),  ],
                         ),
                 Container(
                   padding: EdgeInsets.only( top: 10),
@@ -138,41 +214,74 @@ class event extends StatelessWidget {
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  elevation: 4.0,
-                  child: new InkWell(
-                    onTap: () {
-                      
-                   
-                    },
+                  Card(
 
-                    child: Container(
-                      decoration: new BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0.0, 0.0),
-                            color: Colors.grey.withOpacity(0),
-                            blurRadius: 0.0,
-                          ),
-                        ],
-                        border: Border.all(color: Colors.blue),
-                        borderRadius: new BorderRadius.circular(16.0),
-                        color: Colors.white,
-                      ),
-                      width:  MediaQuery.of(context).size.width * 0.90,
-                      height: 110,
-                      child: Center(
-                          child: Text(
-                            'يوم الأرض',
-                            style: TextStyle(
-                                fontStyle: FontStyle.normal,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0),
-                          )),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 4.0,
+                    child: new InkWell(
+                      onTap: () {
+
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
+                      },
+
+                      child: Container(
+                        decoration: new BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0.0, 5.0),
+                              color: Colors.grey.withOpacity(.7),
+                              blurRadius: 5.0,
+                            ),
+                          ],
+                          //  border: Border.all(color: Colors.blue),
+                          borderRadius: new BorderRadius.circular(16.0),
+                          color: Colors.white,
+                        ),
+                        width:  MediaQuery.of(context).size.width * 0.90,
+                        height: 160,
+                        child:   Container(
+                          padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+                          child: Column(
+                            children: <Widget>[
+                              AspectRatio(
+                                  aspectRatio: 3.5,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: const Radius.circular(20),
+                                        topRight: const Radius.circular(20),
+                                        bottomLeft: const Radius.circular(20),
+                                        bottomRight: const Radius.circular(20)),
+                                    child: Image.asset(
+                                      'images/carnival.jpg',
+                                      //   width: 200,
+                                      height: 120,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  )),
+                            Align(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  'أساسيات الإسعافات الأولية',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0),
+                                )),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Text(
+                                  'كلية الطب',
+                                  style: TextStyle(
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0),
+                                )),
+
+                          ],),),
                     ),
                   ),
                 ),],),
@@ -181,47 +290,82 @@ class event extends StatelessWidget {
                   padding: EdgeInsets.only( top: 10),
 
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Card(
+
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
                       elevation: 4.0,
                       child: new InkWell(
                         onTap: () {
 
-
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
                         },
 
                         child: Container(
                           decoration: new BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                                offset: Offset(0.0, 5.0),
+                                color: Colors.grey.withOpacity(.7),
+                                blurRadius: 5.0,
                               ),
                             ],
-                            border: Border.all(color: Colors.blue),
+                            //  border: Border.all(color: Colors.blue),
                             borderRadius: new BorderRadius.circular(16.0),
                             color: Colors.white,
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                                'المعرض الفني',
-                                style: TextStyle(
-                                    fontStyle: FontStyle.normal,
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0),
-                              )),
+                          height: 160,
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+                            child: Column(
+                              children: <Widget>[
+                                AspectRatio(
+                                    aspectRatio: 3.5,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: const Radius.circular(20),
+                                          topRight: const Radius.circular(20),
+                                          bottomLeft: const Radius.circular(20),
+                                          bottomRight: const Radius.circular(20)),
+                                      child: Image.asset(
+                                        'images/carnival.jpg',
+                                        //   width: 200,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
+                                Align(
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      'كرنفال السعادة',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      'كلية الآداب',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+
+                              ],),),
                         ),
                       ),
                     ),],),
+
                 Container(
                   padding: EdgeInsets.only( top: 10),
 
@@ -230,43 +374,82 @@ class event extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Card(
+
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
                       elevation: 4.0,
                       child: new InkWell(
                         onTap: () {
 
-
+//                              Navigator.push(context, MaterialPageRoute(builder: (context) => AppoinMain()),);
                         },
 
                         child: Container(
                           decoration: new BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(0.0, 0.0),
-                                color: Colors.grey.withOpacity(0),
-                                blurRadius: 0.0,
+                                offset: Offset(0.0, 5.0),
+                                color: Colors.grey.withOpacity(.7),
+                                blurRadius: 5.0,
                               ),
                             ],
-                            border: Border.all(color: Colors.blue),
+                            //  border: Border.all(color: Colors.blue),
                             borderRadius: new BorderRadius.circular(16.0),
                             color: Colors.white,
                           ),
                           width:  MediaQuery.of(context).size.width * 0.90,
-                          height: 110,
-                          child: Center(
-                              child: Text(
-                                'المعرض الفني',
-                                style: TextStyle(
-                                    fontStyle: FontStyle.normal,
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20.0),
-                              )),
+                          height: 160,
+                          child:   Container(
+                            padding: EdgeInsets.only(top: 10,right: 20,left: 20,),
+                            child: Column(
+                              children: <Widget>[
+                                AspectRatio(
+                                    aspectRatio: 3.5,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: const Radius.circular(20),
+                                          topRight: const Radius.circular(20),
+                                          bottomLeft: const Radius.circular(20),
+                                          bottomRight: const Radius.circular(20)),
+                                      child: Image.asset(
+                                        'images/carnival.jpg',
+                                        //   width: 200,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
+                                Align(
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      'يوم الأرض',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      'البهو الرئيسي',
+                                      style: TextStyle(
+                                          fontStyle: FontStyle.normal,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
+                                    )),
+
+                              ],),),
                         ),
                       ),
                     ),],),
+
+                Container(
+                  padding: EdgeInsets.only( top: 10),
+
+                ),
+
 
 
               ],
