@@ -6,15 +6,11 @@ import 'package:shift/components/signup.dart';
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-
-        appBar:  AppBar(centerTitle: true, title: Text("شِفت",style: TextStyle(color:Colors.black,fontSize: 50,),),backgroundColor: Colors.white,elevation: 0,),
-
         body: const MyStatefulWidget(),
       ),
     );
@@ -38,10 +34,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget>[
-
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Image.asset(
+                "images/Logo.png",
+                height: 200,
+              ),
+            ),
             Container(
                 alignment: Alignment.center,
-                padding:  EdgeInsets.only(top:80,bottom: 20),
+                padding: EdgeInsets.only(top: 80, bottom: 20),
                 child: const Text(
                   'أهلاً وسهلاً',
                   style: TextStyle(fontSize: 20),
@@ -55,15 +57,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  hintText:  'ادخل اسم المستخدم',
+                  hintText: 'ادخل اسم المستخدم',
                 ),
               ),
             ),
             Container(
-
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
-
                 textAlign: TextAlign.right,
                 obscureText: true,
                 controller: passwordController,
@@ -71,34 +71,34 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  hintText:  'الرمز السري',                ),
+                  hintText: 'الرمز السري',
+                ),
               ),
             ),
             TextButton(
               onPressed: () {
                 //forgot password screen
               },
-              child: const Text('نسيت الرمز السري؟',),
+              child: const Text(
+                'نسيت الرمز السري؟',
+              ),
             ),
             Container(
-              padding: EdgeInsets.only( top: 40),
-
+              padding: EdgeInsets.only(top: 40),
             ),
-
             Container(
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                    style: ButtonStyle(
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-
-                            )
-                        )
-                    ),
-                  child: const Text('دخول'),
-
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ))),
+                  child: const Text(
+                    'تسجيل الدخول',
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                  ),
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
@@ -107,12 +107,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       MaterialPageRoute(builder: (context) => const NavBar()),
                     );
                   },
-                )
-            ),
+                )),
             Row(
               children: <Widget>[
                 TextButton(
-
                   child: const Text(
                     'أنشئ حساب جديد',
                     style: TextStyle(fontSize: 15),

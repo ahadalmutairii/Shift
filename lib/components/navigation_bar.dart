@@ -4,14 +4,11 @@ import 'package:shift/components/events.dart';
 import 'package:shift/components/Jobs.dart';
 import 'package:shift/components/job.dart';
 import 'package:shift/screens/home_screen.dart';
-import 'package:shift/components/volunteering.dart';
+import 'package:shift/components/myJobs.dart';
 import 'package:shift/components/COOP.dart';
 import 'package:shift/components/login.dart';
 import 'package:shift/screens/profile_screen.dart';
 import 'package:shift/components/signup.dart';
-
-
-
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -25,16 +22,12 @@ class _NavBarState extends State<NavBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-   MyHomePage(),
+    MyHomePage(),
     jobs(),
-    volunteering(),
+    myJobs(),
     Profile(),
 
     // event(),
-
-
-  
-  
   ];
 
   void _onItemTapped(int index) {
@@ -172,7 +165,7 @@ class _NavBarState extends State<NavBar> {
             icon: Icon(Icons.calendar_today_outlined),
             label: 'الوظائف',
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'حسابي',
           ),
@@ -180,7 +173,7 @@ class _NavBarState extends State<NavBar> {
         currentIndex: _selectedIndex,
         selectedItemColor: Color(0xFF0277BD),
         unselectedItemColor: Colors.black,
-        backgroundColor: Color(0xFF0277BD) ,
+        backgroundColor: Color(0xFF0277BD),
         onTap: _onItemTapped,
       ),
     );
