@@ -175,7 +175,14 @@ class Profile extends StatelessWidget {
             ),
 
 
-                ],)
+                ],),
+                  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             Text("المفضلة"),
+            Text("المفضلة")
+          ],
+        )
                 
                 ],
       
