@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shift/components/login.dart';
 import 'package:shift/screens/my_info.dart';
 
 class Profile extends StatelessWidget {
@@ -10,21 +11,39 @@ class Profile extends StatelessWidget {
       child: Column(children: [
     
         SizedBox(
-                    height: 70,
+                    height: 30,
                   ),
+                    GestureDetector(
+                      child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Icon(Icons.arrow_forward_ios,size: 35,),
+                                  SizedBox(width: 20,)
+                                ],
+                              ),onTap: (){
+
+                               
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const login()),
+                    );                  
+                              }
+                    ),
                   Center(
                     child: Stack(children: [
                       ClipOval(
                         
                         child: Material(
                           
-                          color: Colors.blue,
-                          child: Image.asset(
-                                  'images/profile_page.png',
-                                  width: 150,
-                                  height: 150,
-                                  fit: BoxFit.cover,
-                                )
+                          color: Colors.grey[200],
+                          // child: Image.asset(
+                          //         'images/profile_page.png',
+                          //         width: 150,
+                          //         height: 150,
+                          //         fit: BoxFit.cover,
+                          //       )
+                          child:
+                          Icon(Icons.person,size: 140,color:Colors.grey)
                            
                         ),
                       ),
@@ -188,6 +207,7 @@ class Profile extends StatelessWidget {
     
     
                   ],),
+                  SizedBox(height: 15,),
                     Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
